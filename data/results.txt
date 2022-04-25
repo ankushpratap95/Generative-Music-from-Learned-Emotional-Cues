@@ -1,0 +1,3227 @@
+use gpu
+model:  WaveNetModel(
+  (filter_convs): ModuleList(
+    (0): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (1): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (2): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (3): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (4): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (5): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (6): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (7): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (8): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (9): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (10): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (11): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (12): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (13): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (14): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (15): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (16): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (17): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (18): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (19): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (20): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (21): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (22): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (23): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (24): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (25): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (26): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (27): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (28): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (29): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+  )
+  (gate_convs): ModuleList(
+    (0): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (1): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (2): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (3): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (4): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (5): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (6): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (7): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (8): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (9): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (10): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (11): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (12): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (13): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (14): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (15): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (16): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (17): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (18): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (19): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (20): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (21): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (22): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (23): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (24): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (25): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (26): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (27): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (28): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+    (29): Conv1d(32, 32, kernel_size=(2,), stride=(1,))
+  )
+  (residual_convs): ModuleList(
+    (0): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (1): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (2): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (3): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (4): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (5): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (6): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (7): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (8): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (9): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (10): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (11): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (12): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (13): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (14): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (15): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (16): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (17): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (18): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (19): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (20): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (21): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (22): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (23): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (24): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (25): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (26): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (27): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (28): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+    (29): Conv1d(32, 32, kernel_size=(1,), stride=(1,))
+  )
+  (skip_convs): ModuleList(
+    (0): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (1): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (2): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (3): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (4): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (5): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (6): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (7): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (8): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (9): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (10): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (11): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (12): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (13): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (14): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (15): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (16): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (17): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (18): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (19): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (20): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (21): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (22): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (23): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (24): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (25): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (26): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (27): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (28): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+    (29): Conv1d(32, 1024, kernel_size=(1,), stride=(1,))
+  )
+  (start_conv): Conv1d(256, 32, kernel_size=(1,), stride=(1,))
+  (end_conv_1): Conv1d(1024, 512, kernel_size=(1,), stride=(1,))
+  (end_conv_2): Conv1d(512, 256, kernel_size=(1,), stride=(1,))
+)
+receptive field:  3070
+parameter count:  1834592
+one hot input
+the dataset has 598277 items
+start training...
+epoch 0
+one training step does take approximately 0.19045884370803834 seconds)
+loss at step 200: 4.91622761964798
+loss at step 400: 3.814248914718628
+validation loss: 3.898807004292806
+validation accuracy: 7.136894824707847%
+loss at step 600: 3.559118152856827
+loss at step 800: 3.4736168503761293
+validation loss: 3.6368943945566814
+validation accuracy: 8.143781302170282%
+loss at step 1000: 3.4115856897830965
+loss at step 1200: 3.364843935966492
+validation loss: 3.5466023286183677
+validation accuracy: 8.587228714524207%
+loss at step 1400: 3.3354347002506257
+loss at step 1600: 3.2921284902095795
+validation loss: 3.4599444421132404
+validation accuracy: 8.983722871452422%
+loss at step 1800: 3.264744808673859
+loss at step 2000: 3.239732722043991
+validation loss: 3.407802454630534
+validation accuracy: 9.568030050083474%
+loss at step 2200: 3.2333316338062286
+loss at step 2400: 3.2114879417419435
+validation loss: 3.371559263865153
+validation accuracy: 9.614983305509183%
+loss at step 2600: 3.193409548997879
+loss at step 2800: 3.1697191870212555
+validation loss: 3.3403166135152182
+validation accuracy: 9.599332220367279%
+loss at step 3000: 3.1730111980438234
+loss at step 3200: 3.163964139223099
+validation loss: 3.3393753242492674
+validation accuracy: 9.583681135225376%
+loss at step 3400: 3.14356960773468
+loss at step 3600: 3.1428789925575256
+validation loss: 3.330856596628825
+validation accuracy: 9.58889816360601%
+loss at step 3800: 3.1201375734806063
+loss at step 4000: 3.105679087638855
+validation loss: 3.3060101509094237
+validation accuracy: 10.089732888146912%
+loss at step 4200: 3.0984029853343964
+loss at step 4400: 3.0939450633525847
+validation loss: 3.242983306248983
+validation accuracy: 10.501878130217028%
+loss at step 4600: 3.0907652807235717
+loss at step 4800: 3.0943350088596344
+validation loss: 3.2328370889027913
+validation accuracy: 10.679257095158597%
+loss at step 5000: 3.0775169277191163
+loss at step 5200: 3.052378361225128
+validation loss: 3.2116207853953043
+validation accuracy: 10.62186978297162%
+loss at step 5400: 3.0549012565612794
+loss at step 5600: 3.049887140989304
+validation loss: 3.192111250559489
+validation accuracy: 11.023580968280468%
+loss at step 5800: 3.048890521526337
+loss at step 6000: 3.053226956129074
+validation loss: 3.212223008473714
+validation accuracy: 10.90880634390651%
+loss at step 6200: 3.0264363265037537
+loss at step 6400: 3.03239097237587
+validation loss: 3.181311569213867
+validation accuracy: 11.080968280467445%
+loss at step 6600: 3.026455990076065
+loss at step 6800: 3.0245778620243073
+validation loss: 3.1709319591522216
+validation accuracy: 11.31051752921536%
+loss at step 7000: 3.024216899871826
+loss at step 7200: 3.016773084402084
+validation loss: 3.1389031632741293
+validation accuracy: 11.117487479131887%
+loss at step 7400: 3.004558151960373
+loss at step 7600: 2.9939106059074403
+validation loss: 3.113208141326904
+validation accuracy: 11.94177796327212%
+loss at step 7800: 2.9934513068199156
+loss at step 8000: 2.9854146218299866
+validation loss: 3.107165724436442
+validation accuracy: 11.675709515859767%
+loss at step 8200: 3.004385669231415
+loss at step 8400: 2.978135211467743
+validation loss: 3.093403336207072
+validation accuracy: 11.847871452420701%
+loss at step 8600: 2.9763359224796293
+loss at step 8800: 2.9635805213451385
+validation loss: 3.1285605525970457
+validation accuracy: 11.070534223706177%
+loss at step 9000: 2.9568782687187194
+loss at step 9200: 2.9481554877758027
+validation loss: 3.071978670756022
+validation accuracy: 12.140025041736227%
+loss at step 9400: 2.958147727251053
+loss at step 9600: 2.9596501648426057
+validation loss: 3.076591412226359
+validation accuracy: 12.009599332220368%
+loss at step 9800: 2.935280851125717
+loss at step 10000: 2.9381714355945587
+validation loss: 3.0541525077819824
+validation accuracy: 12.186978297161936%
+loss at step 10200: 2.929138823747635
+loss at step 10400: 2.918389536142349
+validation loss: 3.0339643987019858
+validation accuracy: 12.593906510851419%
+loss at step 10600: 2.9250493705272675
+loss at step 10800: 2.927508138418198
+validation loss: 3.018675241470337
+validation accuracy: 12.682595993322204%
+loss at step 11000: 2.907403123378754
+loss at step 11200: 2.920376318693161
+validation loss: 3.021879024505615
+validation accuracy: 12.432178631051753%
+loss at step 11400: 2.917230542898178
+loss at step 11600: 2.8957263326644895
+validation loss: 3.068524497350057
+validation accuracy: 12.197412353923205%
+loss at step 11800: 2.882891421318054
+loss at step 12000: 2.9045699214935303
+validation loss: 3.0193917083740236
+validation accuracy: 12.724332220367279%
+loss at step 12200: 2.901635525226593
+loss at step 12400: 2.896590211391449
+validation loss: 3.0027542877197266
+validation accuracy: 12.447829716193656%
+loss at step 12600: 2.88319282412529
+loss at step 12800: 2.8845289409160615
+validation loss: 3.0077162075042723
+validation accuracy: 12.442612687813021%
+loss at step 13000: 2.8988143157958985
+loss at step 13200: 2.8826443672180178
+validation loss: 2.9754364109039306
+validation accuracy: 12.651293823038397%
+loss at step 13400: 2.8525314640998842
+loss at step 13600: 2.8783596861362457
+validation loss: 2.967585055033366
+validation accuracy: 12.687813021702837%
+loss at step 13800: 2.887859356403351
+loss at step 14000: 2.862378134727478
+validation loss: 2.9790883509318036
+validation accuracy: 12.886060100166945%
+loss at step 14200: 2.8736083340644836
+loss at step 14400: 2.8665807676315307
+validation loss: 2.9572862656911214
+validation accuracy: 12.943447412353922%
+loss at step 14600: 2.869810341596603
+loss at step 14800: 2.8546772742271425
+validation loss: 2.9535619481404622
+validation accuracy: 13.089524207011685%
+loss at step 15000: 2.845011652708054
+loss at step 15200: 2.8420284509658815
+validation loss: 2.9650094731648764
+validation accuracy: 12.395659432387312%
+loss at step 15400: 2.8543934762477874
+loss at step 15600: 2.864661980867386
+validation loss: 2.938344841003418
+validation accuracy: 13.444282136894826%
+loss at step 15800: 2.84308762550354
+loss at step 16000: 2.8413984143733977
+validation loss: 2.9453377310434976
+validation accuracy: 13.287771285475793%
+loss at step 16200: 2.833108434677124
+loss at step 16400: 2.8211268055438996
+validation loss: 2.9476328404744465
+validation accuracy: 12.859974958263773%
+loss at step 16600: 2.830145239830017
+loss at step 16800: 2.845980373620987
+validation loss: 2.924795087178548
+validation accuracy: 13.35559265442404%
+loss at step 17000: 2.822602595090866
+loss at step 17200: 2.8396130990982056
+validation loss: 2.936637493769328
+validation accuracy: 12.917362270450752%
+loss at step 17400: 2.8047717428207397
+loss at step 17600: 2.8165555274486542
+validation loss: 2.931729834874471
+validation accuracy: 13.621661101836393%
+loss at step 17800: 2.828859180212021
+loss at step 18000: 2.8226604223251344
+validation loss: 2.8990455881754555
+validation accuracy: 13.929465776293823%
+loss at step 18200: 2.806415297985077
+loss at step 18400: 2.81451957821846
+validation loss: 2.897561025619507
+validation accuracy: 13.647746243739567%
+loss at step 18600: 2.8130284321308134
+loss at step 18800: 2.80010363817215
+validation loss: 2.9126385084788002
+validation accuracy: 13.501669449081803%
+loss at step 19000: 2.7903904628753664
+loss at step 19200: 2.8138286936283112
+validation loss: 2.887329174677531
+validation accuracy: 13.919031719532555%
+loss at step 19400: 2.8063772392272948
+loss at step 19600: 2.7943482065200804
+validation loss: 2.911968905131022
+validation accuracy: 13.439065108514189%
+loss at step 19800: 2.8275229930877686
+loss at step 20000: 2.7961986756324766
+validation loss: 2.881493412653605
+validation accuracy: 13.668614357262104%
+loss at step 20200: 2.8172524118423463
+loss at step 20400: 2.805846951007843
+validation loss: 2.8792436854044596
+validation accuracy: 13.397328881469114%
+loss at step 20600: 2.777531410455704
+loss at step 20800: 2.8015874111652375
+validation loss: 2.889121799468994
+validation accuracy: 13.292988313856426%
+loss at step 21000: 2.779720972776413
+loss at step 21200: 2.7900622415542604
+validation loss: 2.8770981502532957
+validation accuracy: 13.731218697829718%
+loss at step 21400: 2.77945965051651
+loss at step 21600: 2.758396612405777
+validation loss: 2.858465611139933
+validation accuracy: 13.788606010016693%
+loss at step 21800: 2.782651598453522
+loss at step 22000: 2.780812040567398
+validation loss: 2.85732084274292
+validation accuracy: 13.79382303839733%
+loss at step 22200: 2.785599254369736
+loss at step 22400: 2.7777864646911623
+validation loss: 2.9307533740997314
+validation accuracy: 11.279215358931552%
+loss at step 22600: 2.7759655368328096
+loss at step 22800: 2.7526590728759768
+validation loss: 2.8833089129130047
+validation accuracy: 13.292988313856426%
+loss at step 23000: 2.763380175828934
+loss at step 23200: 2.7632780385017397
+validation loss: 2.851953099568685
+validation accuracy: 13.976419031719534%
+loss at step 23400: 2.775189771652222
+loss at step 23600: 2.765727838277817
+validation loss: 2.862501204808553
+validation accuracy: 13.538188647746244%
+loss at step 23800: 2.7705239343643187
+loss at step 24000: 2.760890063047409
+validation loss: 2.833243179321289
+validation accuracy: 14.665066777963274%
+loss at step 24200: 2.770946922302246
+loss at step 24400: 2.7608542811870573
+validation loss: 2.837166353861491
+validation accuracy: 14.48247078464107%
+loss at step 24600: 2.7559761106967926
+loss at step 24800: 2.768296468257904
+validation loss: 2.8574009482065836
+validation accuracy: 13.861644407345574%
+loss at step 25000: 2.7495272982120516
+loss at step 25200: 2.762729516029358
+validation loss: 2.8384019184112548
+validation accuracy: 14.378130217028382%
+loss at step 25400: 2.752398886680603
+loss at step 25600: 2.7553558468818666
+validation loss: 2.864792286554972
+validation accuracy: 13.720784641068448%
+loss at step 25800: 2.753116533756256
+loss at step 26000: 2.7521334195137026
+validation loss: 2.8440283934275308
+validation accuracy: 14.17466611018364%
+loss at step 26200: 2.7559469711780546
+loss at step 26400: 2.7381645917892454
+validation loss: 2.8518054326375326
+validation accuracy: 13.752086811352255%
+loss at step 26600: 2.7548787355422975
+loss at step 26800: 2.7508829295635224
+validation loss: 2.8307756996154785
+validation accuracy: 14.62854757929883%
+loss at step 27000: 2.75283949136734
+loss at step 27200: 2.7330579280853273
+validation loss: 2.828554681142171
+validation accuracy: 14.560726210350584%
+loss at step 27400: 2.749671928882599
+loss at step 27600: 2.736145169734955
+validation loss: 2.8359986972808837
+validation accuracy: 14.534641068447412%
+loss at step 27800: 2.721453056335449
+loss at step 28000: 2.737416641712189
+validation loss: 2.823182341257731
+validation accuracy: 14.106844741235392%
+loss at step 28200: 2.7312051284313204
+loss at step 28400: 2.7501398396492003
+validation loss: 2.8167348225911457
+validation accuracy: 14.018155258764608%
+loss at step 28600: 2.740397948026657
+loss at step 28800: 2.725903619527817
+validation loss: 2.831805531183879
+validation accuracy: 14.232053422370615%
+loss at step 29000: 2.7260436463356017
+loss at step 29200: 2.7278709530830385
+validation loss: 2.827991978327433
+validation accuracy: 14.419866444073456%
+loss at step 29400: 2.7252016854286194
+loss at step 29600: 2.7293061101436615
+validation loss: 2.796344286600749
+validation accuracy: 14.72245409015025%
+loss at step 29800: 2.724076261520386
+loss at step 30000: 2.7354738938808443
+validation loss: 2.8036358070373537
+validation accuracy: 14.685934891485811%
+loss at step 30200: 2.7177996754646303
+loss at step 30400: 2.728176009654999
+validation loss: 2.7996981652577717
+validation accuracy: 14.691151919866444%
+loss at step 30600: 2.720118969678879
+loss at step 30800: 2.7364213168621063
+validation loss: 2.811962938308716
+validation accuracy: 14.388564273789651%
+loss at step 31000: 2.712067538499832
+loss at step 31200: 2.7230019772052767
+validation loss: 2.813605769475301
+validation accuracy: 15.082429048414022%
+loss at step 31400: 2.707795635461807
+loss at step 31600: 2.700485917329788
+validation loss: 2.7953917535146076
+validation accuracy: 14.414649415692821%
+loss at step 31800: 2.709677137136459
+loss at step 32000: 2.722340751886368
+validation loss: 2.775721664428711
+validation accuracy: 15.139816360601003%
+loss at step 32200: 2.7252182483673097
+loss at step 32400: 2.736239894628525
+validation loss: 2.777780227661133
+validation accuracy: 14.93635225375626%
+loss at step 32600: 2.7218472743034363
+loss at step 32800: 2.7246878254413605
+validation loss: 2.7909976959228517
+validation accuracy: 14.717237061769616%
+loss at step 33000: 2.702697433233261
+loss at step 33200: 2.72693944811821
+validation loss: 2.7881241257985434
+validation accuracy: 14.910267111853088%
+loss at step 33400: 2.729437526464462
+loss at step 33600: 2.694687044620514
+validation loss: 2.771020415623983
+validation accuracy: 15.32762938230384%
+loss at step 33800: 2.7110866999626158
+loss at step 34000: 2.6963203501701356
+validation loss: 2.791076784133911
+validation accuracy: 14.539858096828045%
+loss at step 34200: 2.704142612218857
+loss at step 34400: 2.71699977517128
+validation loss: 2.7812027963002524
+validation accuracy: 15.265025041736227%
+loss at step 34600: 2.713770557641983
+loss at step 34800: 2.7068945717811586
+validation loss: 2.7781136798858643
+validation accuracy: 14.821577629382304%
+loss at step 35000: 2.7111172485351562
+loss at step 35200: 2.712131441831589
+validation loss: 2.8262068525950115
+validation accuracy: 14.25813856427379%
+loss at step 35400: 2.7054461455345153
+loss at step 35600: 2.697881942987442
+validation loss: 2.791997261047363
+validation accuracy: 14.899833055091818%
+loss at step 35800: 2.7004094767570495
+loss at step 36000: 2.7119397628307342
+validation loss: 2.765362075169881
+validation accuracy: 15.238939899833055%
+loss at step 36200: 2.7020067608356477
+loss at step 36400: 2.6943355309963226
+validation loss: 2.7522476228078205
+validation accuracy: 15.285893155258764%
+loss at step 36600: 2.6942998111248015
+loss at step 36800: 2.6957781970500947
+validation loss: 2.7690806516011555
+validation accuracy: 15.379799666110184%
+loss at step 37000: 2.6869176745414736
+loss at step 37200: 2.6960368072986602
+validation loss: 2.7606776746114097
+validation accuracy: 15.092863105175292%
+epoch 1
+loss at step 37400: 2.692554050683975
+loss at step 37600: 2.6797092068195343
+validation loss: 2.7791400369008383
+validation accuracy: 15.306761268781303%
+loss at step 37800: 2.690893750190735
+loss at step 38000: 2.662226275205612
+validation loss: 2.783973636627197
+validation accuracy: 14.440734557595993%
+loss at step 38200: 2.6905941462516783
+loss at step 38400: 2.6863994121551515
+validation loss: 2.780799128214518
+validation accuracy: 14.983305509181971%
+loss at step 38600: 2.701435697078705
+loss at step 38800: 2.6967267644405366
+validation loss: 2.7677201334635417
+validation accuracy: 15.546744574290482%
+loss at step 39000: 2.6825506150722505
+loss at step 39200: 2.6710232710838318
+validation loss: 2.747299400965373
+validation accuracy: 15.296327212020033%
+loss at step 39400: 2.679472826719284
+loss at step 39600: 2.6712975943088533
+validation loss: 2.7567159112294517
+validation accuracy: 15.218071786310517%
+loss at step 39800: 2.693993489742279
+loss at step 40000: 2.695110250711441
+validation loss: 2.7854727522532143
+validation accuracy: 14.665066777963274%
+loss at step 40200: 2.6896823048591614
+loss at step 40400: 2.6777918696403504
+validation loss: 2.7574808247884115
+validation accuracy: 15.118948247078464%
+loss at step 40600: 2.6753117311000825
+loss at step 40800: 2.6864040887355802
+validation loss: 2.7542159779866537
+validation accuracy: 15.275459098497496%
+loss at step 41000: 2.665459220409393
+loss at step 41200: 2.7066632282733916
+validation loss: 2.7640737215677897
+validation accuracy: 15.071994991652755%
+loss at step 41400: 2.6787873578071593
+loss at step 41600: 2.680112291574478
+validation loss: 2.75221534093221
+validation accuracy: 15.28067612687813%
+loss at step 41800: 2.6797006797790526
+loss at step 42000: 2.669994202852249
+validation loss: 2.760722074508667
+validation accuracy: 15.197203672787978%
+loss at step 42200: 2.681267555952072
+loss at step 42400: 2.6593517589569093
+validation loss: 2.742355610529582
+validation accuracy: 15.583263772954925%
+loss at step 42600: 2.6757518327236176
+loss at step 42800: 2.6741741669178007
+validation loss: 2.7310535430908205
+validation accuracy: 15.844115191986644%
+loss at step 43000: 2.660293843746185
+loss at step 43200: 2.6604427671432496
+validation loss: 2.740596078236898
+validation accuracy: 15.416318864774626%
+loss at step 43400: 2.651945085525513
+loss at step 43600: 2.652564574480057
+validation loss: 2.7579369258880617
+validation accuracy: 15.677170283806344%
+loss at step 43800: 2.673732645511627
+loss at step 44000: 2.664852248430252
+validation loss: 2.7393504269917806
+validation accuracy: 15.228505843071785%
+loss at step 44200: 2.6788802313804627
+loss at step 44400: 2.6607854735851286
+validation loss: 2.7490625476837156
+validation accuracy: 15.134599332220366%
+loss at step 44600: 2.6506322062015535
+loss at step 44800: 2.685693336725235
+validation loss: 2.7717286777496337
+validation accuracy: 15.040692821368948%
+loss at step 45000: 2.663860033750534
+loss at step 45200: 2.660570137500763
+validation loss: 2.739736150105794
+validation accuracy: 15.442404006677796%
+loss at step 45400: 2.6585967361927034
+loss at step 45600: 2.652593560218811
+validation loss: 2.774939037958781
+validation accuracy: 15.984974958263773%
+loss at step 45800: 2.655363174676895
+loss at step 46000: 2.6750484323501587
+validation loss: 2.7387449423472088
+validation accuracy: 15.416318864774626%
+loss at step 46200: 2.6543963968753816
+loss at step 46400: 2.6569434201717375
+validation loss: 2.7320678997039796
+validation accuracy: 15.165901502504173%
+loss at step 46600: 2.673312250375748
+loss at step 46800: 2.6390376710891723
+validation loss: 2.7202729670206707
+validation accuracy: 16.224958263772955%
+loss at step 47000: 2.6604292488098142
+loss at step 47200: 2.6781840097904204
+validation loss: 2.738270591100057
+validation accuracy: 15.572829716193656%
+loss at step 47400: 2.6465021991729736
+loss at step 47600: 2.661905038356781
+validation loss: 2.746118497848511
+validation accuracy: 15.207637729549248%
+loss at step 47800: 2.667569012641907
+loss at step 48000: 2.6698947286605836
+validation loss: 2.7422079372406007
+validation accuracy: 15.452838063439064%
+loss at step 48200: 2.658052223920822
+loss at step 48400: 2.6657152020931245
+validation loss: 2.7478127161661785
+validation accuracy: 15.045909849749584%
+loss at step 48600: 2.649524290561676
+loss at step 48800: 2.646316736936569
+validation loss: 2.731127440134684
+validation accuracy: 15.562395659432388%
+loss at step 49000: 2.6536621248722074
+loss at step 49200: 2.649925847053528
+validation loss: 2.7377663135528563
+validation accuracy: 15.505008347245408%
+loss at step 49400: 2.6422678983211516
+loss at step 49600: 2.6576138949394226
+validation loss: 2.7325302886962892
+validation accuracy: 15.9588898163606%
+loss at step 49800: 2.659650504589081
+loss at step 50000: 2.6636895763874056
+validation loss: 2.7207283115386964
+validation accuracy: 15.807595993322204%
+loss at step 50200: 2.652648733854294
+loss at step 50400: 2.6624365758895876
+validation loss: 2.730528523127238
+validation accuracy: 15.630217028380637%
+loss at step 50600: 2.6533072853088377
+loss at step 50800: 2.666473035812378
+validation loss: 2.7083848031361897
+validation accuracy: 15.917153589315525%
+loss at step 51000: 2.646856337785721
+loss at step 51200: 2.6500809371471403
+validation loss: 2.766433801651001
+validation accuracy: 15.191986644407345%
+loss at step 51400: 2.645371891260147
+loss at step 51600: 2.642918498516083
+validation loss: 2.7324959437052407
+validation accuracy: 15.265025041736227%
+loss at step 51800: 2.6329293513298033
+loss at step 52000: 2.65147732257843
+validation loss: 2.7333842595418294
+validation accuracy: 15.48414023372287%
+loss at step 52200: 2.6451807034015657
+loss at step 52400: 2.6414527070522307
+validation loss: 2.7194461663564047
+validation accuracy: 15.390233722871452%
+loss at step 52600: 2.6180867028236388
+loss at step 52800: 2.646541633605957
+validation loss: 2.710616184870402
+validation accuracy: 15.94845575959933%
+loss at step 53000: 2.6316968429088594
+loss at step 53200: 2.6593645358085634
+validation loss: 2.734202858606974
+validation accuracy: 15.092863105175292%
+loss at step 53400: 2.6499444568157196
+loss at step 53600: 2.652845983505249
+validation loss: 2.7149148495992024
+validation accuracy: 15.364148580968282%
+loss at step 53800: 2.6382579731941225
+loss at step 54000: 2.6295112669467926
+validation loss: 2.717705357869466
+validation accuracy: 15.744991652754592%
+loss at step 54200: 2.643959424495697
+loss at step 54400: 2.64039261341095
+validation loss: 2.711730782190959
+validation accuracy: 16.073664440734557%
+loss at step 54600: 2.6379733967781065
+loss at step 54800: 2.648502564430237
+validation loss: 2.7237932300567627
+validation accuracy: 15.995409015025041%
+loss at step 55000: 2.6483392465114592
+loss at step 55200: 2.6394493496418
+validation loss: 2.7335835838317872
+validation accuracy: 15.63543405676127%
+loss at step 55400: 2.6346463429927827
+loss at step 55600: 2.6316773819923402
+validation loss: 2.7112873554229737
+validation accuracy: 15.76585976627713%
+loss at step 55800: 2.6555463206768035
+loss at step 56000: 2.6494703769683836
+validation loss: 2.6887830607096355
+validation accuracy: 16.569282136894824%
+loss at step 56200: 2.6558819925785064
+loss at step 56400: 2.6357810068130494
+validation loss: 2.7069916121164956
+validation accuracy: 15.807595993322204%
+loss at step 56600: 2.6278016495704652
+loss at step 56800: 2.6472092771530153
+validation loss: 2.714254706700643
+validation accuracy: 16.438856427378965%
+loss at step 57000: 2.6422364640235902
+loss at step 57200: 2.635713219642639
+validation loss: 2.685646028518677
+validation accuracy: 16.428422370617696%
+loss at step 57400: 2.6393024456501006
+loss at step 57600: 2.63334441781044
+validation loss: 2.7124977334340414
+validation accuracy: 15.724123539232055%
+loss at step 57800: 2.6344460916519163
+loss at step 58000: 2.6277220463752746
+validation loss: 2.7043356386820476
+validation accuracy: 15.499791318864775%
+loss at step 58200: 2.635949193239212
+loss at step 58400: 2.6499213790893554
+validation loss: 2.7115425141652425
+validation accuracy: 15.76585976627713%
+loss at step 58600: 2.636622350215912
+loss at step 58800: 2.647179307937622
+validation loss: 2.6993535804748534
+validation accuracy: 15.92237061769616%
+loss at step 59000: 2.6415343642234803
+loss at step 59200: 2.623502758741379
+validation loss: 2.7260876814524333
+validation accuracy: 15.567612687813021%
+loss at step 59400: 2.6299501132965086
+loss at step 59600: 2.6308941185474395
+validation loss: 2.719028679529826
+validation accuracy: 15.854549248747912%
+loss at step 59800: 2.630377929210663
+loss at step 60000: 2.6388849127292633
+validation loss: 2.7232207520802816
+validation accuracy: 16.099749582637727%
+loss at step 60200: 2.6154387974739075
+loss at step 60400: 2.643692786693573
+validation loss: 2.7120295556386314
+validation accuracy: 15.786727879799667%
+loss at step 60600: 2.6319990253448484
+loss at step 60800: 2.6503993380069732
+validation loss: 2.6968556785583497
+validation accuracy: 16.339732888146912%
+loss at step 61000: 2.612417879104614
+loss at step 61200: 2.6342005121707914
+validation loss: 2.702174352010091
+validation accuracy: 16.15713689482471%
+loss at step 61400: 2.628966915607452
+loss at step 61600: 2.6327004396915434
+validation loss: 2.687099142074585
+validation accuracy: 16.15713689482471%
+loss at step 61800: 2.6215575444698334
+loss at step 62000: 2.6231537008285524
+validation loss: 2.696034075419108
+validation accuracy: 15.94845575959933%
+loss at step 62200: 2.6239026832580565
+loss at step 62400: 2.623057545423508
+validation loss: 2.6975827757517497
+validation accuracy: 16.026711185308848%
+loss at step 62600: 2.6477409529685976
+loss at step 62800: 2.6407326674461364
+validation loss: 2.692198263804118
+validation accuracy: 15.567612687813021%
+loss at step 63000: 2.6287138640880583
+loss at step 63200: 2.6367537808418273
+validation loss: 2.6983992767333986
+validation accuracy: 15.94845575959933%
+loss at step 63400: 2.617011845111847
+loss at step 63600: 2.6329168021678924
+validation loss: 2.689731340408325
+validation accuracy: 15.656302170283807%
+loss at step 63800: 2.6211662888526917
+loss at step 64000: 2.617542769908905
+validation loss: 2.712561534245809
+validation accuracy: 16.339732888146912%
+loss at step 64200: 2.6361656057834626
+loss at step 64400: 2.622706124782562
+validation loss: 2.712469987869263
+validation accuracy: 15.797161936560936%
+loss at step 64600: 2.6334828341007235
+loss at step 64800: 2.606681277751923
+validation loss: 2.685878219604492
+validation accuracy: 16.15191986644407%
+loss at step 65000: 2.6215965163707735
+loss at step 65200: 2.6218321228027346
+validation loss: 2.700449085235596
+validation accuracy: 16.24060934891486%
+loss at step 65400: 2.6207024669647216
+loss at step 65600: 2.621707892417908
+validation loss: 2.681175047556559
+validation accuracy: 15.703255425709518%
+loss at step 65800: 2.6343681848049165
+loss at step 66000: 2.6105154836177826
+validation loss: 2.6831262715657553
+validation accuracy: 16.75709515859766%
+loss at step 66200: 2.6366914808750153
+loss at step 66400: 2.62778675198555
+validation loss: 2.683275473912557
+validation accuracy: 16.37103505843072%
+loss at step 66600: 2.6262624430656434
+loss at step 66800: 2.626755439043045
+validation loss: 2.6953073183695477
+validation accuracy: 15.818030050083474%
+loss at step 67000: 2.6205627596378327
+loss at step 67200: 2.631930080652237
+validation loss: 2.6960703976949056
+validation accuracy: 15.729340567612688%
+loss at step 67400: 2.601547474861145
+loss at step 67600: 2.6084163117408754
+validation loss: 2.6901861000061036
+validation accuracy: 16.31364774624374%
+loss at step 67800: 2.6267861485481263
+loss at step 68000: 2.622581443786621
+validation loss: 2.671777677536011
+validation accuracy: 16.642320534223707%
+loss at step 68200: 2.6052568113803862
+loss at step 68400: 2.624736683368683
+validation loss: 2.6818012173970542
+validation accuracy: 16.699707846410686%
+loss at step 68600: 2.6254081928730013
+loss at step 68800: 2.618126858472824
+validation loss: 2.676731793085734
+validation accuracy: 16.324081803005008%
+loss at step 69000: 2.628685804605484
+loss at step 69200: 2.6260211515426635
+validation loss: 2.6731881936391195
+validation accuracy: 16.83535058430718%
+loss at step 69400: 2.6282503044605257
+loss at step 69600: 2.613963156938553
+validation loss: 2.712425816853841
+validation accuracy: 15.92237061769616%
+loss at step 69800: 2.6125074303150178
+loss at step 70000: 2.615465322732925
+validation loss: 2.6875742117563886
+validation accuracy: 16.13626878130217%
+loss at step 70200: 2.607495039701462
+loss at step 70400: 2.611654155254364
+validation loss: 2.6873193168640137
+validation accuracy: 16.449290484140235%
+loss at step 70600: 2.6234363508224487
+loss at step 70800: 2.613499484062195
+validation loss: 2.676319103240967
+validation accuracy: 16.720575959933225%
+loss at step 71000: 2.6062054622173307
+loss at step 71200: 2.6160455393791198
+validation loss: 2.6676879056294758
+validation accuracy: 16.329298831385643%
+loss at step 71400: 2.589901511669159
+loss at step 71600: 2.600927702188492
+validation loss: 2.6727990118662515
+validation accuracy: 16.7779632721202%
+loss at step 71800: 2.6245418429374694
+loss at step 72000: 2.6054263389110566
+validation loss: 2.6752569421132404
+validation accuracy: 16.308430717863104%
+loss at step 72200: 2.6067755675315856
+loss at step 72400: 2.624739589691162
+validation loss: 2.698012679417928
+validation accuracy: 16.178005008347245%
+loss at step 72600: 2.6001122534275054
+loss at step 72800: 2.6179365241527557
+validation loss: 2.6754320081075034
+validation accuracy: 16.01627712854758%
+loss at step 73000: 2.6270455420017242
+loss at step 73200: 2.6071773755550383
+validation loss: 2.6819073581695556
+validation accuracy: 16.631886477462437%
+loss at step 73400: 2.6163052213191986
+loss at step 73600: 2.6054750168323517
+validation loss: 2.677419516245524
+validation accuracy: 16.381469115191987%
+loss at step 73800: 2.5902649533748625
+loss at step 74000: 2.608514084815979
+validation loss: 2.6798465887705487
+validation accuracy: 15.76585976627713%
+loss at step 74200: 2.609610937833786
+loss at step 74400: 2.6040195536613466
+validation loss: 2.666395597457886
+validation accuracy: 16.66840567612688%
+loss at step 74600: 2.5961166977882386
+epoch 2
+loss at step 74800: 2.597595146894455
+validation loss: 2.665259736378988
+validation accuracy: 16.42320534223706%
+loss at step 75000: 2.5919256246089937
+loss at step 75200: 2.5972698390483857
+validation loss: 2.6636343797047934
+validation accuracy: 16.209307178631054%
+loss at step 75400: 2.6026803040504456
+loss at step 75600: 2.602252348661423
+validation loss: 2.670783904393514
+validation accuracy: 16.287562604340565%
+loss at step 75800: 2.5997468423843384
+loss at step 76000: 2.6150134921073915
+validation loss: 2.669076426823934
+validation accuracy: 16.417988313856426%
+loss at step 76200: 2.5922912895679473
+loss at step 76400: 2.606519811153412
+validation loss: 2.665588305791219
+validation accuracy: 16.339732888146912%
+loss at step 76600: 2.623718249797821
+loss at step 76800: 2.6022776699066164
+validation loss: 2.6727675565083824
+validation accuracy: 16.428422370617696%
+loss at step 77000: 2.5940281808376313
+loss at step 77200: 2.6077237594127656
+validation loss: 2.6933183574676516
+validation accuracy: 16.224958263772955%
+loss at step 77400: 2.5869841420650483
+loss at step 77600: 2.604923198223114
+validation loss: 2.6830454444885254
+validation accuracy: 16.355383973288813%
+loss at step 77800: 2.5962423312664034
+loss at step 78000: 2.592881270647049
+validation loss: 2.6772970136006675
+validation accuracy: 16.047579298831387%
+loss at step 78200: 2.594465804100037
+loss at step 78400: 2.582044748663902
+validation loss: 2.6716132799784345
+validation accuracy: 16.037145242070117%
+loss at step 78600: 2.611242707967758
+loss at step 78800: 2.5968047738075257
+validation loss: 2.6794352881113688
+validation accuracy: 16.24060934891486%
+loss at step 79000: 2.601070569753647
+loss at step 79200: 2.5981891560554504
+validation loss: 2.6586294396718344
+validation accuracy: 16.950125208681136%
+loss at step 79400: 2.604106341600418
+loss at step 79600: 2.598608469963074
+validation loss: 2.6667839940388998
+validation accuracy: 16.21974123539232%
+loss at step 79800: 2.608343323469162
+loss at step 80000: 2.594875112771988
+validation loss: 2.647585334777832
+validation accuracy: 16.814482470784643%
+loss at step 80200: 2.6007689797878264
+loss at step 80400: 2.609695564508438
+validation loss: 2.6982780583699544
+validation accuracy: 16.4440734557596%
+loss at step 80600: 2.6068269562721254
+loss at step 80800: 2.5871186518669127
+validation loss: 2.6625831953684487
+validation accuracy: 16.600584307178632%
+loss at step 81000: 2.60020094871521
+loss at step 81200: 2.576084142923355
+validation loss: 2.670215435028076
+validation accuracy: 16.381469115191987%
+loss at step 81400: 2.594242932796478
+loss at step 81600: 2.590666811466217
+validation loss: 2.6544627507527667
+validation accuracy: 17.080550918196995%
+loss at step 81800: 2.5821809113025664
+loss at step 82000: 2.6039534366130828
+validation loss: 2.644932788213094
+validation accuracy: 17.017946577629385%
+loss at step 82200: 2.592164908647537
+loss at step 82400: 2.5857150077819826
+validation loss: 2.6601409022013347
+validation accuracy: 16.344949916527547%
+loss at step 82600: 2.5945914673805235
+loss at step 82800: 2.590445523262024
+validation loss: 2.661006857554118
+validation accuracy: 16.412771285475795%
+loss at step 83000: 2.583750829696655
+loss at step 83200: 2.5792618477344513
+validation loss: 2.652924861907959
+validation accuracy: 16.783180300500835%
+loss at step 83400: 2.5976257765293123
+loss at step 83600: 2.5976019489765165
+validation loss: 2.661489184697469
+validation accuracy: 16.69449081803005%
+loss at step 83800: 2.5970826780796052
+loss at step 84000: 2.597895610332489
+validation loss: 2.6694036134084067
+validation accuracy: 16.6110183639399%
+loss at step 84200: 2.5937674546241762
+loss at step 84400: 2.5922224390506745
+validation loss: 2.6535127194722494
+validation accuracy: 17.04924874791319%
+loss at step 84600: 2.5870921075344087
+loss at step 84800: 2.593660681247711
+validation loss: 2.655288279851278
+validation accuracy: 16.647537562604338%
+loss at step 85000: 2.601647922992706
+loss at step 85200: 2.5863131046295167
+validation loss: 2.655562245051066
+validation accuracy: 16.600584307178632%
+loss at step 85400: 2.5916746759414675
+loss at step 85600: 2.5763076865673065
+validation loss: 2.6520602734883627
+validation accuracy: 16.965776293823037%
+loss at step 85800: 2.5853051495552064
+loss at step 86000: 2.587645388841629
+validation loss: 2.683520107269287
+validation accuracy: 16.569282136894824%
+loss at step 86200: 2.570344069004059
+loss at step 86400: 2.5855791115760804
+validation loss: 2.6525064182281493
+validation accuracy: 16.449290484140235%
+loss at step 86600: 2.58316596865654
+loss at step 86800: 2.591439524888992
+validation loss: 2.6413716888427734
+validation accuracy: 16.903171953255423%
+loss at step 87000: 2.5923893177509307
+loss at step 87200: 2.578718647956848
+validation loss: 2.6541185569763184
+validation accuracy: 16.522328881469114%
+loss at step 87400: 2.5867603278160094
+loss at step 87600: 2.5802839732170106
+validation loss: 2.6713456217447917
+validation accuracy: 15.938021702838062%
+loss at step 87800: 2.5909138202667235
+loss at step 88000: 2.5936790549755098
+validation loss: 2.637984832127889
+validation accuracy: 17.07011686143573%
+loss at step 88200: 2.5699648904800414
+loss at step 88400: 2.575666254758835
+validation loss: 2.647400172551473
+validation accuracy: 16.76752921535893%
+loss at step 88600: 2.5761097848415373
+loss at step 88800: 2.587651801109314
+validation loss: 2.6513340695699057
+validation accuracy: 16.318864774624373%
+loss at step 89000: 2.574350162744522
+loss at step 89200: 2.5996835696697236
+validation loss: 2.6587485535939535
+validation accuracy: 16.334515859766277%
+loss at step 89400: 2.586177170276642
+loss at step 89600: 2.590371260643005
+validation loss: 2.6622489802042644
+validation accuracy: 16.24060934891486%
+loss at step 89800: 2.5925639879703524
+loss at step 90000: 2.584886031150818
+validation loss: 2.643435640335083
+validation accuracy: 17.054465776293824%
+loss at step 90200: 2.5779023611545564
+loss at step 90400: 2.5751140213012693
+validation loss: 2.6583448378245036
+validation accuracy: 16.308430717863104%
+loss at step 90600: 2.58684280872345
+loss at step 90800: 2.593596464395523
+validation loss: 2.651064904530843
+validation accuracy: 16.819699499165274%
+loss at step 91000: 2.582686630487442
+loss at step 91200: 2.593724555969238
+validation loss: 2.6730952707926434
+validation accuracy: 16.6110183639399%
+loss at step 91400: 2.59778112411499
+loss at step 91600: 2.6035080552101135
+validation loss: 2.6356955019632977
+validation accuracy: 16.840567612687813%
+loss at step 91800: 2.576915062665939
+loss at step 92000: 2.5906327533721925
+validation loss: 2.6427503967285157
+validation accuracy: 17.450959933222038%
+loss at step 92200: 2.563699505329132
+loss at step 92400: 2.6010265028476716
+validation loss: 2.6530684725443523
+validation accuracy: 16.7779632721202%
+loss at step 92600: 2.587268899679184
+loss at step 92800: 2.5711483478546144
+validation loss: 2.660114186604818
+validation accuracy: 16.621452420701168%
+loss at step 93000: 2.5781706619262694
+loss at step 93200: 2.579442673921585
+validation loss: 2.647671407063802
+validation accuracy: 16.830133555926544%
+loss at step 93400: 2.5866342306137087
+loss at step 93600: 2.594070463180542
+validation loss: 2.671747843424479
+validation accuracy: 16.35016694490818%
+loss at step 93800: 2.598641414642334
+loss at step 94000: 2.5712573289871217
+validation loss: 2.6572945817311604
+validation accuracy: 16.882303839732888%
+loss at step 94200: 2.5810152745246886
+loss at step 94400: 2.5766046833992005
+validation loss: 2.636156441370646
+validation accuracy: 17.21619365609349%
+loss at step 94600: 2.5781551229953767
+loss at step 94800: 2.5828303015232086
+validation loss: 2.6406243515014647
+validation accuracy: 16.47015859766277%
+loss at step 95000: 2.57320849776268
+loss at step 95200: 2.596832045316696
+validation loss: 2.666387793223063
+validation accuracy: 16.43363939899833%
+loss at step 95400: 2.586724499464035
+loss at step 95600: 2.5738500225543977
+validation loss: 2.6473585828145345
+validation accuracy: 16.746661101836395%
+loss at step 95800: 2.5857263410091402
+loss at step 96000: 2.575809745788574
+validation loss: 2.6461698087056478
+validation accuracy: 16.68405676126878%
+loss at step 96200: 2.5599163150787354
+loss at step 96400: 2.5822474539279936
+validation loss: 2.638464584350586
+validation accuracy: 16.39712020033389%
+loss at step 96600: 2.5844557666778565
+loss at step 96800: 2.5722976863384246
+validation loss: 2.6586853472391763
+validation accuracy: 16.939691151919867%
+loss at step 97000: 2.5738904333114623
+loss at step 97200: 2.5854403972625732
+validation loss: 2.6504240163167316
+validation accuracy: 16.511894824707845%
+loss at step 97400: 2.5823853719234466
+loss at step 97600: 2.5954359447956086
+validation loss: 2.674210599263509
+validation accuracy: 16.558848080133558%
+loss at step 97800: 2.5761196756362916
+loss at step 98000: 2.573422955274582
+validation loss: 2.636647564570109
+validation accuracy: 16.66840567612688%
+loss at step 98200: 2.584565215110779
+loss at step 98400: 2.5841355764865876
+validation loss: 2.6309895006815593
+validation accuracy: 17.37270450751252%
+loss at step 98600: 2.5743603467941285
+loss at step 98800: 2.568709056377411
+validation loss: 2.646042728424072
+validation accuracy: 16.55363105175292%
+loss at step 99000: 2.575222899913788
+loss at step 99200: 2.5817475962638854
+validation loss: 2.66314466158549
+validation accuracy: 16.689273789649416%
+loss at step 99400: 2.582396527528763
+loss at step 99600: 2.5815916657447815
+validation loss: 2.642824993133545
+validation accuracy: 16.678839732888147%
+loss at step 99800: 2.575902841091156
+loss at step 100000: 2.5887069034576418
+validation loss: 2.6350572077433267
+validation accuracy: 16.75187813021703%
+loss at step 100200: 2.5786517417430876
+loss at step 100400: 2.561414053440094
+validation loss: 2.669752314885457
+validation accuracy: 16.475375626043405%
+loss at step 100600: 2.575889976024628
+loss at step 100800: 2.581910923719406
+validation loss: 2.660367644627889
+validation accuracy: 16.532762938230384%
+loss at step 101000: 2.5780979526042938
+loss at step 101200: 2.5721857464313507
+validation loss: 2.6357009665171307
+validation accuracy: 17.08576794657763%
+loss at step 101400: 2.5741470146179197
+loss at step 101600: 2.583395359516144
+validation loss: 2.6433575757344565
+validation accuracy: 16.90838898163606%
+loss at step 101800: 2.573318120241165
+loss at step 102000: 2.5692119991779325
+validation loss: 2.644888998667399
+validation accuracy: 16.52754590984975%
+loss at step 102200: 2.568400365114212
+loss at step 102400: 2.5844575345516203
+validation loss: 2.656702569325765
+validation accuracy: 16.986644407345576%
+loss at step 102600: 2.5608381104469298
+loss at step 102800: 2.5657246363162995
+validation loss: 2.6441864649454754
+validation accuracy: 16.830133555926544%
+loss at step 103000: 2.571603068113327
+loss at step 103200: 2.582846602201462
+validation loss: 2.637525062561035
+validation accuracy: 16.74144407345576%
+loss at step 103400: 2.550536253452301
+loss at step 103600: 2.5858278667926786
+validation loss: 2.6661093107859295
+validation accuracy: 16.840567612687813%
+loss at step 103800: 2.575659681558609
+loss at step 104000: 2.585169221162796
+validation loss: 2.6612101395924888
+validation accuracy: 16.99186143572621%
+loss at step 104200: 2.5637288320064546
+loss at step 104400: 2.5775133895874025
+validation loss: 2.640833527247111
+validation accuracy: 16.78839732888147%
+loss at step 104600: 2.582679089307785
+loss at step 104800: 2.5806637620925903
+validation loss: 2.6436849053700766
+validation accuracy: 16.77274624373957%
+loss at step 105000: 2.5638934206962585
+loss at step 105200: 2.568286646604538
+validation loss: 2.6261568609873454
+validation accuracy: 17.450959933222038%
+loss at step 105400: 2.5678538918495177
+loss at step 105600: 2.585522804260254
+validation loss: 2.6320758946736653
+validation accuracy: 16.809265442404005%
+loss at step 105800: 2.5630557632446287
+loss at step 106000: 2.5785803985595703
+validation loss: 2.630681654612223
+validation accuracy: 16.877086811352253%
+loss at step 106200: 2.5646048164367676
+loss at step 106400: 2.579695619344711
+validation loss: 2.6311249351501464
+validation accuracy: 16.934474123539232%
+loss at step 106600: 2.5708780312538146
+loss at step 106800: 2.5660301458835604
+validation loss: 2.631830104192098
+validation accuracy: 16.924040066777962%
+loss at step 107000: 2.5682722330093384
+loss at step 107200: 2.590574495792389
+validation loss: 2.636486514409383
+validation accuracy: 16.840567612687813%
+loss at step 107400: 2.579492233991623
+loss at step 107600: 2.5728340005874633
+validation loss: 2.6197716077168782
+validation accuracy: 17.320534223706176%
+loss at step 107800: 2.573214259147644
+loss at step 108000: 2.57163738489151
+validation loss: 2.6214961783091226
+validation accuracy: 17.46661101836394%
+loss at step 108200: 2.5698181271553038
+loss at step 108400: 2.5578687739372254
+validation loss: 2.661962671279907
+validation accuracy: 16.69449081803005%
+loss at step 108600: 2.5651814699172975
+loss at step 108800: 2.573426594734192
+validation loss: 2.6309234301249185
+validation accuracy: 17.122287145242073%
+loss at step 109000: 2.561096428632736
+loss at step 109200: 2.577754476070404
+validation loss: 2.6554407914479574
+validation accuracy: 16.70492487479132%
+loss at step 109400: 2.6022219395637514
+loss at step 109600: 2.563084338903427
+validation loss: 2.628814919789632
+validation accuracy: 16.54841402337229%
+loss at step 109800: 2.5753926289081575
+loss at step 110000: 2.5631585347652437
+validation loss: 2.6227878665924074
+validation accuracy: 16.90838898163606%
+loss at step 110200: 2.5673437988758088
+loss at step 110400: 2.5575177907943725
+validation loss: 2.663097381591797
+validation accuracy: 16.198873121869784%
+loss at step 110600: 2.568479609489441
+loss at step 110800: 2.57890442609787
+validation loss: 2.6347125339508057
+validation accuracy: 16.934474123539232%
+loss at step 111000: 2.5593326711654663
+loss at step 111200: 2.5805332541465758
+validation loss: 2.629589433670044
+validation accuracy: 17.08576794657763%
+loss at step 111400: 2.558644491434097
+loss at step 111600: 2.562887667417526
+validation loss: 2.634279308319092
+validation accuracy: 16.924040066777962%
+loss at step 111800: 2.582978872060776
+loss at step 112000: 2.5508930814266204
+validation loss: 2.6222010231018067
+validation accuracy: 17.2787979966611%
+epoch 3
+loss at step 112200: 2.556409878730774
+loss at step 112400: 2.5563257014751435
+validation loss: 2.6153075981140135
+validation accuracy: 17.012729549248746%
+loss at step 112600: 2.558145533800125
+loss at step 112800: 2.5475242674350738
+validation loss: 2.63912584622701
+validation accuracy: 16.73101001669449%
+loss at step 113000: 2.560140585899353
+loss at step 113200: 2.569148517847061
+validation loss: 2.6287102190653484
+validation accuracy: 17.435308848080133%
+loss at step 113400: 2.571930696964264
+loss at step 113600: 2.531189121007919
+validation loss: 2.6351207892100015
+validation accuracy: 16.845784641068448%
+loss at step 113800: 2.5582514345645904
+loss at step 114000: 2.5478935945034027
+validation loss: 2.616915289560954
+validation accuracy: 17.00751252086811%
+loss at step 114200: 2.566994743347168
+loss at step 114400: 2.557573264837265
+validation loss: 2.607340332667033
+validation accuracy: 16.85100166944908%
+loss at step 114600: 2.552716372013092
+loss at step 114800: 2.55375231385231
+validation loss: 2.649449268976847
+validation accuracy: 16.86143572621035%
+loss at step 115000: 2.5706204867362974
+loss at step 115200: 2.5612009143829346
+validation loss: 2.6415478960673013
+validation accuracy: 16.558848080133558%
+loss at step 115400: 2.5563623440265655
+loss at step 115600: 2.5766567468643187
+validation loss: 2.6421429443359377
+validation accuracy: 17.00229549248748%
+loss at step 115800: 2.559484508037567
+loss at step 116000: 2.549908446073532
+validation loss: 2.643925231297811
+validation accuracy: 16.663188647746242%
+loss at step 116200: 2.5538943719863894
+loss at step 116400: 2.563377939462662
+validation loss: 2.6249485047658285
+validation accuracy: 16.976210350584306%
+loss at step 116600: 2.5276565527915955
+loss at step 116800: 2.574943220615387
+validation loss: 2.6591477743784586
+validation accuracy: 16.569282136894824%
+loss at step 117000: 2.558543654680252
+loss at step 117200: 2.551552723646164
+validation loss: 2.636955655415853
+validation accuracy: 17.273580968280466%
+loss at step 117400: 2.558691668510437
+loss at step 117600: 2.537565588951111
+validation loss: 2.6152181593577066
+validation accuracy: 16.99186143572621%
+loss at step 117800: 2.556334309577942
+loss at step 118000: 2.5660672891139984
+validation loss: 2.630881964365641
+validation accuracy: 16.647537562604338%
+loss at step 118200: 2.560664486885071
+loss at step 118400: 2.5622072875499726
+validation loss: 2.6146987533569335
+validation accuracy: 17.330968280467445%
+loss at step 118600: 2.5472963535785675
+loss at step 118800: 2.564444786310196
+validation loss: 2.6321419302622475
+validation accuracy: 17.179674457429048%
+loss at step 119000: 2.5592570793628693
+loss at step 119200: 2.5570425069332123
+validation loss: 2.787950340906779
+validation accuracy: 13.80947412353923%
+loss at step 119400: 2.579915289878845
+loss at step 119600: 2.5712540912628175
+validation loss: 2.621592982610067
+validation accuracy: 17.357053422370615%
+loss at step 119800: 2.5597880351543427
+loss at step 120000: 2.5585412752628325
+validation loss: 2.637415459950765
+validation accuracy: 16.66840567612688%
+loss at step 120200: 2.5574168086051943
+loss at step 120400: 2.5416744530200956
+validation loss: 2.6176803493499756
+validation accuracy: 16.913606010016693%
+loss at step 120600: 2.563267239332199
+loss at step 120800: 2.5307280266284944
+validation loss: 2.635479326248169
+validation accuracy: 16.965776293823037%
+loss at step 121000: 2.5418323266506193
+loss at step 121200: 2.557760229110718
+validation loss: 2.6334451738993327
+validation accuracy: 17.320534223706176%
+loss at step 121400: 2.5631257474422453
+loss at step 121600: 2.546529152393341
+validation loss: 2.640973049799601
+validation accuracy: 16.501460767946575%
+loss at step 121800: 2.5680780708789825
+loss at step 122000: 2.5486945605278013
+validation loss: 2.6220719877878826
+validation accuracy: 17.127504173622704%
+loss at step 122200: 2.577931810617447
+loss at step 122400: 2.5606986021995546
+validation loss: 2.649302167892456
+validation accuracy: 16.783180300500835%
+loss at step 122600: 2.5510406672954558
+loss at step 122800: 2.552169933319092
+validation loss: 2.6283742872873943
+validation accuracy: 16.955342237061767%
+loss at step 123000: 2.557017593383789
+loss at step 123200: 2.549895337820053
+validation loss: 2.631093804041545
+validation accuracy: 16.663188647746242%
+loss at step 123400: 2.5758883643150328
+loss at step 123600: 2.562372533082962
+validation loss: 2.629726956685384
+validation accuracy: 16.7623121869783%
+loss at step 123800: 2.558015834093094
+loss at step 124000: 2.5604172682762147
+validation loss: 2.610779291788737
+validation accuracy: 17.341402337228715%
+loss at step 124200: 2.5475993061065676
+loss at step 124400: 2.569328074455261
+validation loss: 2.6293133449554444
+validation accuracy: 17.231844741235392%
+loss at step 124600: 2.5397127830982207
+loss at step 124800: 2.5568588900566103
+validation loss: 2.623563181559245
+validation accuracy: 17.044031719532555%
+loss at step 125000: 2.557407981157303
+loss at step 125200: 2.5479138576984406
+validation loss: 2.617639840443929
+validation accuracy: 17.341402337228715%
+loss at step 125400: 2.548218593597412
+loss at step 125600: 2.5767875683307646
+validation loss: 2.6198491636912027
+validation accuracy: 16.70492487479132%
+loss at step 125800: 2.587126200199127
+loss at step 126000: 2.5424357295036315
+validation loss: 2.6084190146128337
+validation accuracy: 17.05968280467446%
+loss at step 126200: 2.553352028131485
+loss at step 126400: 2.561160068511963
+validation loss: 2.6284522024790444
+validation accuracy: 17.294449081803005%
+loss at step 126600: 2.561802887916565
+loss at step 126800: 2.564172512292862
+validation loss: 2.6312207921346027
+validation accuracy: 16.783180300500835%
+loss at step 127000: 2.5479775416851043
+loss at step 127200: 2.535412802696228
+validation loss: 2.6048434162139893
+validation accuracy: 17.320534223706176%
+loss at step 127400: 2.546109219789505
+loss at step 127600: 2.56077171087265
+validation loss: 2.6017092768351238
+validation accuracy: 16.924040066777962%
+loss at step 127800: 2.556511696577072
+loss at step 128000: 2.5498083543777468
+validation loss: 2.6217135842641195
+validation accuracy: 17.164023372287147%
+loss at step 128200: 2.546342817544937
+loss at step 128400: 2.5513782584667206
+validation loss: 2.6348135534922283
+validation accuracy: 17.03881469115192%
+loss at step 128600: 2.5632131195068357
+loss at step 128800: 2.5255001544952393
+validation loss: 2.6017825984954834
+validation accuracy: 17.61790484140234%
+loss at step 129000: 2.535182553529739
+loss at step 129200: 2.560647495985031
+validation loss: 2.6321235275268555
+validation accuracy: 16.55363105175292%
+loss at step 129400: 2.563510768413544
+loss at step 129600: 2.549801142215729
+validation loss: 2.6203798993428546
+validation accuracy: 16.929257095158597%
+loss at step 129800: 2.537352763414383
+loss at step 130000: 2.5495956218242646
+validation loss: 2.6184976482391358
+validation accuracy: 16.86143572621035%
+loss at step 130200: 2.5430367076396942
+loss at step 130400: 2.5498359644412996
+validation loss: 2.605963452657064
+validation accuracy: 17.685726210350584%
+loss at step 130600: 2.530218082666397
+loss at step 130800: 2.541136156320572
+validation loss: 2.608691698710124
+validation accuracy: 17.424874791318864%
+loss at step 131000: 2.5650451493263247
+loss at step 131200: 2.561523572206497
+validation loss: 2.616816142400106
+validation accuracy: 17.174457429048413%
+loss at step 131400: 2.559082771539688
+loss at step 131600: 2.5496297800540924
+validation loss: 2.5972926425933838
+validation accuracy: 17.534432387312187%
+loss at step 131800: 2.5351803612709047
+loss at step 132000: 2.5675209879875185
+validation loss: 2.6280665429433188
+validation accuracy: 17.127504173622704%
+loss at step 132200: 2.5426411294937132
+loss at step 132400: 2.547237069606781
+validation loss: 2.6159948698679605
+validation accuracy: 17.221410684474122%
+loss at step 132600: 2.5540870237350464
+loss at step 132800: 2.5427568018436433
+validation loss: 2.6355800342559816
+validation accuracy: 16.924040066777962%
+loss at step 133000: 2.549699375629425
+loss at step 133200: 2.5551368141174318
+validation loss: 2.6523981030782062
+validation accuracy: 16.57449916527546%
+loss at step 133400: 2.565475597381592
+loss at step 133600: 2.56307763338089
+validation loss: 2.662984469731649
+validation accuracy: 17.268363939899835%
+loss at step 133800: 2.5575915002822875
+loss at step 134000: 2.555490205287933
+validation loss: 2.6103830496470133
+validation accuracy: 17.701377295492488%
+loss at step 134200: 2.5273820316791533
+loss at step 134400: 2.5492420530319215
+validation loss: 2.6290604496002197
+validation accuracy: 16.976210350584306%
+loss at step 134600: 2.548125329017639
+loss at step 134800: 2.5391788399219513
+validation loss: 2.6173159948984783
+validation accuracy: 17.445742904841403%
+loss at step 135000: 2.562326707839966
+loss at step 135200: 2.548307727575302
+validation loss: 2.622698367436727
+validation accuracy: 17.32575125208681%
+loss at step 135400: 2.555072410106659
+loss at step 135600: 2.5437333536148072
+validation loss: 2.612866360346476
+validation accuracy: 17.268363939899835%
+loss at step 135800: 2.5526628851890565
+loss at step 136000: 2.548375120162964
+validation loss: 2.6157275740305583
+validation accuracy: 17.32575125208681%
+loss at step 136200: 2.5446936678886414
+loss at step 136400: 2.534638228416443
+validation loss: 2.6026564184824625
+validation accuracy: 17.445742904841403%
+loss at step 136600: 2.5559649407863616
+loss at step 136800: 2.5508252704143524
+validation loss: 2.614821360905965
+validation accuracy: 17.143155258764608%
+loss at step 137000: 2.5392956244945526
+loss at step 137200: 2.541908515691757
+validation loss: 2.6087962913513185
+validation accuracy: 17.111853088480803%
+loss at step 137400: 2.5330265736579896
+loss at step 137600: 2.554846856594086
+validation loss: 2.6113054243723552
+validation accuracy: 17.727462437395662%
+loss at step 137800: 2.548551245927811
+loss at step 138000: 2.5436976146698
+validation loss: 2.6196891562143962
+validation accuracy: 16.746661101836395%
+loss at step 138200: 2.5457312202453615
+loss at step 138400: 2.5546473121643065
+validation loss: 2.5944099680582684
+validation accuracy: 17.7639816360601%
+loss at step 138600: 2.5322052133083344
+loss at step 138800: 2.544182689189911
+validation loss: 2.6130148569742837
+validation accuracy: 17.30488313856427%
+loss at step 139000: 2.563441443443298
+loss at step 139200: 2.5419839787483216
+validation loss: 2.612771002451579
+validation accuracy: 17.497913188647747%
+loss at step 139400: 2.5383629310131073
+loss at step 139600: 2.5528781414031982
+validation loss: 2.6110897890726723
+validation accuracy: 17.555300500834726%
+loss at step 139800: 2.5520748114585876
+loss at step 140000: 2.536015864610672
+validation loss: 2.640894584655762
+validation accuracy: 16.86143572621035%
+loss at step 140200: 2.535557713508606
+loss at step 140400: 2.5434008955955507
+validation loss: 2.607678016026815
+validation accuracy: 17.482262103505843%
+loss at step 140600: 2.5265961837768556
+loss at step 140800: 2.5518216133117675
+validation loss: 2.589707113901774
+validation accuracy: 17.544866444073456%
+loss at step 141000: 2.5602488017082212
+loss at step 141200: 2.540240362882614
+validation loss: 2.5929571215311684
+validation accuracy: 17.701377295492488%
+loss at step 141400: 2.555915434360504
+loss at step 141600: 2.5449300360679628
+validation loss: 2.614483973185221
+validation accuracy: 17.15880634390651%
+loss at step 141800: 2.5471054804325104
+loss at step 142000: 2.5430501675605774
+validation loss: 2.6045871575673423
+validation accuracy: 17.60225375626043%
+loss at step 142200: 2.5399030101299287
+loss at step 142400: 2.552758226394653
+validation loss: 2.5977345593770345
+validation accuracy: 17.685726210350584%
+loss at step 142600: 2.5532023084163664
+loss at step 142800: 2.558650403022766
+validation loss: 2.6061852327982584
+validation accuracy: 17.190108514190317%
+loss at step 143000: 2.5378204834461213
+loss at step 143200: 2.5471076834201813
+validation loss: 2.609480047225952
+validation accuracy: 17.153589315525878%
+loss at step 143400: 2.5436168563365937
+loss at step 143600: 2.5569873678684236
+validation loss: 2.593549477259318
+validation accuracy: 17.508347245409013%
+loss at step 143800: 2.5411672377586365
+loss at step 144000: 2.5412169814109804
+validation loss: 2.6008534622192383
+validation accuracy: 17.419657762938233%
+loss at step 144200: 2.5519019949436186
+loss at step 144400: 2.542962610721588
+validation loss: 2.6176281452178953
+validation accuracy: 17.60747078464107%
+loss at step 144600: 2.5285660147666933
+loss at step 144800: 2.539287929534912
+validation loss: 2.598576323191325
+validation accuracy: 17.388355592654424%
+loss at step 145000: 2.550067915916443
+loss at step 145200: 2.541972972154617
+validation loss: 2.622178560892741
+validation accuracy: 17.21619365609349%
+loss at step 145400: 2.54505645275116
+loss at step 145600: 2.5230123233795165
+validation loss: 2.6128431669871013
+validation accuracy: 17.560517529215357%
+loss at step 145800: 2.5376245737075807
+loss at step 146000: 2.5272245812416076
+validation loss: 2.633576634724935
+validation accuracy: 17.226627712854757%
+loss at step 146200: 2.544441587924957
+loss at step 146400: 2.535124509334564
+validation loss: 2.6221682675679525
+validation accuracy: 16.913606010016693%
+loss at step 146600: 2.5445694410800934
+loss at step 146800: 2.5514956343173982
+validation loss: 2.6048778088887534
+validation accuracy: 17.07533388981636%
+loss at step 147000: 2.5218666303157806
+loss at step 147200: 2.53936622262001
+validation loss: 2.6062840016682944
+validation accuracy: 17.221410684474122%
+loss at step 147400: 2.5482606852054595
+loss at step 147600: 2.544624466896057
+validation loss: 2.6013565921783446
+validation accuracy: 17.57616861435726%
+loss at step 147800: 2.546799250841141
+loss at step 148000: 2.5497767770290376
+validation loss: 2.6080218982696532
+validation accuracy: 17.445742904841403%
+loss at step 148200: 2.5613658487796784
+loss at step 148400: 2.5326059472560885
+validation loss: 2.591749979654948
+validation accuracy: 17.638772954924875%
+loss at step 148600: 2.5544645941257476
+loss at step 148800: 2.5385208106040955
+validation loss: 2.598888308207194
+validation accuracy: 17.91005843071786%
+loss at step 149000: 2.5472917115688323
+loss at step 149200: 2.5458431005477906
+validation loss: 2.5903442414601643
+validation accuracy: 17.190108514190317%
+loss at step 149400: 2.556054335832596
+epoch 4
+loss at step 149600: 2.5382675647735597
+validation loss: 2.5927452087402343
+validation accuracy: 17.07011686143573%
+loss at step 149800: 2.5248213517665863
+loss at step 150000: 2.5174259424209593
+validation loss: 2.588156760533651
+validation accuracy: 17.863105175292155%
+loss at step 150200: 2.5170988500118257
+loss at step 150400: 2.5355361557006835
+validation loss: 2.5910999234517416
+validation accuracy: 17.873539232053425%
+loss at step 150600: 2.5399025070667265
+loss at step 150800: 2.529096328020096
+validation loss: 2.598502842585246
+validation accuracy: 17.6126878130217%
+loss at step 151000: 2.5238679254055025
+loss at step 151200: 2.5374917650222777
+validation loss: 2.6226478099822996
+validation accuracy: 16.783180300500835%
+loss at step 151400: 2.518770549297333
+loss at step 151600: 2.535729379653931
+validation loss: 2.5978207461039227
+validation accuracy: 16.986644407345576%
+loss at step 151800: 2.5564770436286928
+loss at step 152000: 2.4938607585430144
+validation loss: 2.6060328563054402
+validation accuracy: 17.477045075125208%
+loss at step 152200: 2.5339193964004516
+loss at step 152400: 2.547969160079956
+validation loss: 2.6102213795979816
+validation accuracy: 17.012729549248746%
+loss at step 152600: 2.5477471590042113
+loss at step 152800: 2.5217391526699067
+validation loss: 2.6162768745422365
+validation accuracy: 17.263146911519197%
+loss at step 153000: 2.525553591251373
+loss at step 153200: 2.538478547334671
+validation loss: 2.593660570780436
+validation accuracy: 17.7639816360601%
+loss at step 153400: 2.5379565382003784
+loss at step 153600: 2.5417742526531217
+validation loss: 2.612293736139933
+validation accuracy: 17.70659432387312%
+loss at step 153800: 2.5290781807899476
+loss at step 154000: 2.5324495100975035
+validation loss: 2.6094593397776285
+validation accuracy: 17.0962020033389%
+loss at step 154200: 2.523687596321106
+loss at step 154400: 2.519232550859451
+validation loss: 2.6175078550974527
+validation accuracy: 17.174457429048413%
+loss at step 154600: 2.5305307018756866
+loss at step 154800: 2.542339286804199
+validation loss: 2.6096090634663898
+validation accuracy: 17.226627712854757%
+loss at step 155000: 2.5195638966560363
+loss at step 155200: 2.5386556363105774
+validation loss: 2.6110356775919596
+validation accuracy: 17.252712854757927%
+loss at step 155400: 2.536481910943985
+loss at step 155600: 2.5552694523334503
+validation loss: 2.667223103841146
+validation accuracy: 17.054465776293824%
+loss at step 155800: 2.529270750284195
+loss at step 156000: 2.5467415821552275
+validation loss: 2.5871516704559325
+validation accuracy: 17.40400667779633%
+loss at step 156200: 2.557576779127121
+loss at step 156400: 2.542904350757599
+validation loss: 2.5815167554219562
+validation accuracy: 18.12917362270451%
+loss at step 156600: 2.527494169473648
+loss at step 156800: 2.537679294347763
+validation loss: 2.602023286819458
+validation accuracy: 17.85788814691152%
+loss at step 157000: 2.516738022565842
+loss at step 157200: 2.532004373073578
+validation loss: 2.5934728082021077
+validation accuracy: 17.440525876460768%
+loss at step 157400: 2.5352771461009977
+loss at step 157600: 2.5369849574565886
+validation loss: 2.6012094402313233
+validation accuracy: 17.529215358931552%
+loss at step 157800: 2.5242332184314726
+loss at step 158000: 2.5358115470409395
+validation loss: 2.6123407459259034
+validation accuracy: 17.435308848080133%
+loss at step 158200: 2.538960515260696
+loss at step 158400: 2.545401645898819
+validation loss: 2.601902879079183
+validation accuracy: 17.117070116861434%
+loss at step 158600: 2.5188600826263428
+loss at step 158800: 2.543334718942642
+validation loss: 2.6284908771514894
+validation accuracy: 17.04924874791319%
+loss at step 159000: 2.5453263211250303
+loss at step 159200: 2.525003592967987
+validation loss: 2.6048030948638914
+validation accuracy: 17.247495826377296%
+loss at step 159400: 2.5327006566524504
+loss at step 159600: 2.5266685736179353
+validation loss: 2.585938297907511
+validation accuracy: 17.46661101836394%
+loss at step 159800: 2.5309421610832215
+loss at step 160000: 2.5310245060920717
+validation loss: 2.5828448899586998
+validation accuracy: 17.711811352253758%
+loss at step 160200: 2.5534361934661867
+loss at step 160400: 2.522182682752609
+validation loss: 2.603319443066915
+validation accuracy: 17.450959933222038%
+loss at step 160600: 2.5328782320022585
+loss at step 160800: 2.5223911380767823
+validation loss: 2.5894637235005695
+validation accuracy: 17.63355592654424%
+loss at step 161000: 2.52293039560318
+loss at step 161200: 2.535862773656845
+validation loss: 2.5873933903376263
+validation accuracy: 17.330968280467445%
+loss at step 161400: 2.5224409317970276
+loss at step 161600: 2.528320685625076
+validation loss: 2.575404135386149
+validation accuracy: 17.962228714524205%
+loss at step 161800: 2.5229174995422365
+loss at step 162000: 2.5291675305366517
+validation loss: 2.610824632644653
+validation accuracy: 17.346619365609346%
+loss at step 162200: 2.5425619900226595
+loss at step 162400: 2.5450375747680662
+validation loss: 2.6190067672729493
+validation accuracy: 16.79883138564274%
+loss at step 162600: 2.5306825256347656
+loss at step 162800: 2.5289241063594816
+validation loss: 2.5892608833312987
+validation accuracy: 17.711811352253758%
+loss at step 163000: 2.536472587585449
+loss at step 163200: 2.5486371302604676
+validation loss: 2.6028909079233804
+validation accuracy: 17.477045075125208%
+loss at step 163400: 2.5159050858020784
+loss at step 163600: 2.5257198917865753
+validation loss: 2.5869711144765217
+validation accuracy: 17.508347245409013%
+loss at step 163800: 2.530559597015381
+loss at step 164000: 2.5228219413757325
+validation loss: 2.6116021251678467
+validation accuracy: 17.07533388981636%
+loss at step 164200: 2.5292296409606934
+loss at step 164400: 2.5225169289112093
+validation loss: 2.598817672729492
+validation accuracy: 18.01439899833055%
+loss at step 164600: 2.545750287771225
+loss at step 164800: 2.5257115650177
+validation loss: 2.5840273030598957
+validation accuracy: 18.22829716193656%
+loss at step 165000: 2.539530324935913
+loss at step 165200: 2.5206543374061585
+validation loss: 2.5881674512227377
+validation accuracy: 17.252712854757927%
+loss at step 165400: 2.525317516326904
+loss at step 165600: 2.5299792551994322
+validation loss: 2.5948758697509766
+validation accuracy: 17.628338898163605%
+loss at step 165800: 2.521725978851318
+loss at step 166000: 2.5398172271251678
+validation loss: 2.6007720295588177
+validation accuracy: 17.237061769616027%
+loss at step 166200: 2.531443510055542
+loss at step 166400: 2.513695571422577
+validation loss: 2.6208403650919596
+validation accuracy: 17.5970367278798%
+loss at step 166600: 2.5383155012130736
+loss at step 166800: 2.5260738348960876
+validation loss: 2.6009204800923666
+validation accuracy: 17.7639816360601%
+loss at step 167000: 2.5371124684810638
+loss at step 167200: 2.5259203243255617
+validation loss: 2.617122303644816
+validation accuracy: 17.15880634390651%
+loss at step 167400: 2.525881372690201
+loss at step 167600: 2.530410394668579
+validation loss: 2.5853579743703206
+validation accuracy: 17.753547579298832%
+loss at step 167800: 2.5101733016967773
+loss at step 168000: 2.5085580730438233
+validation loss: 2.5769611899058025
+validation accuracy: 17.842237061769616%
+loss at step 168200: 2.518222852945328
+loss at step 168400: 2.5507864236831663
+validation loss: 2.624117643038432
+validation accuracy: 16.496243739565944%
+loss at step 168600: 2.5281940472126005
+loss at step 168800: 2.5368032932281492
+validation loss: 2.594953180948893
+validation accuracy: 17.675292153589314%
+loss at step 169000: 2.5207120037078856
+loss at step 169200: 2.5285492718219755
+validation loss: 2.6010263760884604
+validation accuracy: 17.30488313856427%
+loss at step 169400: 2.545186861753464
+loss at step 169600: 2.529240369796753
+validation loss: 2.593485460281372
+validation accuracy: 17.936143572621035%
+loss at step 169800: 2.5203580546379087
+loss at step 170000: 2.5129245209693907
+validation loss: 2.5836682001749676
+validation accuracy: 17.529215358931552%
+loss at step 170200: 2.519777863025665
+loss at step 170400: 2.5262129390239716
+validation loss: 2.5942543379465737
+validation accuracy: 17.252712854757927%
+loss at step 170600: 2.5359195566177366
+loss at step 170800: 2.5392382669448854
+validation loss: 2.589605302810669
+validation accuracy: 17.82136894824708%
+loss at step 171000: 2.5123594331741335
+loss at step 171200: 2.516651114225388
+validation loss: 2.5830134932200113
+validation accuracy: 18.01439899833055%
+loss at step 171400: 2.5321347379684447
+loss at step 171600: 2.5128702795505524
+validation loss: 2.580547030766805
+validation accuracy: 17.90484140233723%
+loss at step 171800: 2.5314340472221373
+loss at step 172000: 2.52115486741066
+validation loss: 2.575176150004069
+validation accuracy: 18.25959933222037%
+loss at step 172200: 2.532587741613388
+loss at step 172400: 2.5395125687122344
+validation loss: 2.5772628657023113
+validation accuracy: 17.80050083472454%
+loss at step 172600: 2.5201939547061922
+loss at step 172800: 2.5265943562984465
+validation loss: 2.5981642405192056
+validation accuracy: 17.30488313856427%
+loss at step 173000: 2.5557934892177583
+loss at step 173200: 2.5366970574855805
+validation loss: 2.6056545988718667
+validation accuracy: 16.819699499165274%
+loss at step 173400: 2.53007043838501
+loss at step 173600: 2.5311000072956085
+validation loss: 2.5893940416971843
+validation accuracy: 18.13439065108514%
+loss at step 173800: 2.5370409524440767
+loss at step 174000: 2.5290122973918914
+validation loss: 2.5920228513081867
+validation accuracy: 16.9449081803005%
+loss at step 174200: 2.5343440067768097
+loss at step 174400: 2.5216489040851595
+validation loss: 2.6001958433787027
+validation accuracy: 17.555300500834726%
+loss at step 174600: 2.5275135922431944
+loss at step 174800: 2.522161637544632
+validation loss: 2.5932042026519775
+validation accuracy: 17.60747078464107%
+loss at step 175000: 2.513726593255997
+loss at step 175200: 2.541162894964218
+validation loss: 2.5834744612375897
+validation accuracy: 17.868322203672786%
+loss at step 175400: 2.5181255495548247
+loss at step 175600: 2.5519934594631195
+validation loss: 2.6992433357238768
+validation accuracy: 13.8199081803005%
+loss at step 175800: 2.5362624394893647
+loss at step 176000: 2.5293548846244813
+validation loss: 2.584403158823649
+validation accuracy: 18.087437395659435%
+loss at step 176200: 2.524113967418671
+loss at step 176400: 2.522981264591217
+validation loss: 2.5891270573933918
+validation accuracy: 17.774415692821368%
+loss at step 176600: 2.536933339834213
+loss at step 176800: 2.511413542032242
+validation loss: 2.587545468012492
+validation accuracy: 17.743113522537563%
+loss at step 177000: 2.5355441617965697
+loss at step 177200: 2.5457675206661223
+validation loss: 2.590044199625651
+validation accuracy: 16.934474123539232%
+loss at step 177400: 2.5229550790786743
+loss at step 177600: 2.5287399923801424
+validation loss: 2.589781951904297
+validation accuracy: 17.717028380634392%
+loss at step 177800: 2.5282155978679657
+loss at step 178000: 2.5167413079738616
+validation loss: 2.581835702260335
+validation accuracy: 18.374373956594322%
+loss at step 178200: 2.5144502794742585
+loss at step 178400: 2.5250874185562133
+validation loss: 2.591807696024577
+validation accuracy: 17.179674457429048%
+loss at step 178600: 2.520669393539429
+loss at step 178800: 2.5188432431221006
+validation loss: 2.584318567911784
+validation accuracy: 18.165692821368946%
+loss at step 179000: 2.531661270856857
+loss at step 179200: 2.5262248301506043
+validation loss: 2.6208402824401857
+validation accuracy: 17.263146911519197%
+loss at step 179400: 2.5274638986587523
+loss at step 179600: 2.513596702814102
+validation loss: 2.595675579706828
+validation accuracy: 17.60225375626043%
+loss at step 179800: 2.505042346715927
+loss at step 180000: 2.5135036647319793
+validation loss: 2.5954771105448406
+validation accuracy: 17.341402337228715%
+loss at step 180200: 2.536594659090042
+loss at step 180400: 2.539818134307861
+validation loss: 2.5907849311828612
+validation accuracy: 17.61790484140234%
+loss at step 180600: 2.53158394575119
+loss at step 180800: 2.527630866765976
+validation loss: 2.570053914388021
+validation accuracy: 17.868322203672786%
+loss at step 181000: 2.533536401987076
+loss at step 181200: 2.513103642463684
+validation loss: 2.587714881896973
+validation accuracy: 17.91005843071786%
+loss at step 181400: 2.5248669159412382
+loss at step 181600: 2.51908997297287
+validation loss: 2.6387909285227455
+validation accuracy: 17.534432387312187%
+loss at step 181800: 2.5327333295345307
+loss at step 182000: 2.5306677079200743
+validation loss: 2.5988113117218017
+validation accuracy: 17.4300918196995%
+loss at step 182200: 2.527799307107925
+loss at step 182400: 2.5178566360473633
+validation loss: 2.59772341410319
+validation accuracy: 17.482262103505843%
+loss at step 182600: 2.5146153283119204
+loss at step 182800: 2.5140925598144532
+validation loss: 2.5964980856577555
+validation accuracy: 17.471828046744577%
+loss at step 183000: 2.509194859266281
+loss at step 183200: 2.5172597301006316
+validation loss: 2.5875274085998536
+validation accuracy: 18.030050083472453%
+loss at step 183400: 2.5303873515129087
+loss at step 183600: 2.515540165901184
+validation loss: 2.5728493229548137
+validation accuracy: 18.06135225375626%
+loss at step 183800: 2.515420745611191
+loss at step 184000: 2.532937318086624
+validation loss: 2.596907478968302
+validation accuracy: 17.591819699499165%
+loss at step 184200: 2.517504045963287
+loss at step 184400: 2.535611616373062
+validation loss: 2.564529914855957
+validation accuracy: 18.207429048414024%
+loss at step 184600: 2.5209749007225035
+loss at step 184800: 2.5355899703502653
+validation loss: 2.583717826207479
+validation accuracy: 17.659641068447414%
+loss at step 185000: 2.521737198829651
+loss at step 185200: 2.5145518362522123
+validation loss: 2.5828021494547526
+validation accuracy: 17.84745409015025%
+loss at step 185400: 2.516706144809723
+loss at step 185600: 2.5208591878414155
+validation loss: 2.585833444595337
+validation accuracy: 18.160475792988315%
+loss at step 185800: 2.5446380865573883
+loss at step 186000: 2.5136096656322477
+validation loss: 2.568088130950928
+validation accuracy: 18.050918196994992%
+loss at step 186200: 2.5258410668373106
+loss at step 186400: 2.52183119058609
+validation loss: 2.5979923756917316
+validation accuracy: 17.012729549248746%
+loss at step 186600: 2.5102756929397585
+loss at step 186800: 2.5048871660232543
+validation loss: 2.609867418607076
+validation accuracy: 17.137938230383973%
+epoch 5
+loss at step 187000: 2.530686293840408
+loss at step 187200: 2.511710432767868
+validation loss: 2.571296068827311
+validation accuracy: 18.390025041736227%
+loss at step 187400: 2.5101069128513336
+loss at step 187600: 2.5178508734703064
+validation loss: 2.592796417872111
+validation accuracy: 17.36748747913189%
+loss at step 187800: 2.509238405227661
+loss at step 188000: 2.5052329123020174
+validation loss: 2.5890116405487063
+validation accuracy: 17.57616861435726%
+loss at step 188200: 2.5349152064323426
+loss at step 188400: 2.5196696066856386
+validation loss: 2.5742463143666585
+validation accuracy: 17.6126878130217%
+loss at step 188600: 2.5164394080638885
+loss at step 188800: 2.5064165353775025
+validation loss: 2.5768695290883383
+validation accuracy: 17.889190317195325%
+loss at step 189000: 2.5127365696430206
+loss at step 189200: 2.513702861070633
+validation loss: 2.585521348317464
+validation accuracy: 17.435308848080133%
+loss at step 189400: 2.5001003241539
+loss at step 189600: 2.5287092721462248
+validation loss: 2.578888699213664
+validation accuracy: 17.70659432387312%
+loss at step 189800: 2.5160681223869323
+loss at step 190000: 2.5160937988758088
+validation loss: 2.580550324122111
+validation accuracy: 17.70659432387312%
+loss at step 190200: 2.509978952407837
+loss at step 190400: 2.500279812812805
+validation loss: 2.604951581954956
+validation accuracy: 16.840567612687813%
+loss at step 190600: 2.517024142742157
+loss at step 190800: 2.526176906824112
+validation loss: 2.636724548339844
+validation accuracy: 17.70659432387312%
+loss at step 191000: 2.525651738643646
+loss at step 191200: 2.4984223794937135
+validation loss: 2.5990341758728026
+validation accuracy: 16.887520868113523%
+loss at step 191400: 2.5088052701950074
+loss at step 191600: 2.5168773412704466
+validation loss: 2.576323699951172
+validation accuracy: 17.972662771285474%
+loss at step 191800: 2.513412672281265
+loss at step 192000: 2.7116956734657287
+validation loss: 4.204044049580892
+validation accuracy: 10.345367278797998%
+loss at step 192200: 2.881299216747284
+loss at step 192400: 2.6523140370845795
+validation loss: 2.678511463801066
+validation accuracy: 16.74144407345576%
+loss at step 192600: 2.5933812320232392
+loss at step 192800: 2.5796307706832886
+validation loss: 2.6285457388559976
+validation accuracy: 16.960559265442406%
+loss at step 193000: 2.5574384427070616
+loss at step 193200: 2.5422979485988617
+validation loss: 2.601665032704671
+validation accuracy: 17.357053422370615%
+loss at step 193400: 2.535288109779358
+loss at step 193600: 2.522460998296738
+validation loss: 2.591542568206787
+validation accuracy: 17.461393989983307%
+loss at step 193800: 2.5156854236125947
+loss at step 194000: 2.515121177434921
+validation loss: 2.574949620564779
+validation accuracy: 18.400459098497496%
+loss at step 194200: 2.5394561553001402
+loss at step 194400: 2.5025305414199828
+validation loss: 2.5939804204305013
+validation accuracy: 17.37270450751252%
+loss at step 194600: 2.517672253847122
+loss at step 194800: 2.5007927989959717
+validation loss: 2.571085112889608
+validation accuracy: 18.337854757929883%
+loss at step 195000: 2.5176131451129913
+loss at step 195200: 2.5093532514572146
+validation loss: 2.586573766072591
+validation accuracy: 17.737896494156928%
+loss at step 195400: 2.5211773574352265
+loss at step 195600: 2.502593365907669
+validation loss: 2.593573989868164
+validation accuracy: 17.414440734557594%
+loss at step 195800: 2.527731833457947
+loss at step 196000: 2.516302796602249
+validation loss: 2.59305900255839
+validation accuracy: 17.57616861435726%
+loss at step 196200: 2.504668962955475
+loss at step 196400: 2.513926420211792
+validation loss: 2.5813940874735515
+validation accuracy: 17.67007512520868%
+loss at step 196600: 2.5266118800640105
+loss at step 196800: 2.5110006964206697
+validation loss: 2.59597066561381
+validation accuracy: 18.045701168614357%
+loss at step 197000: 2.557920188903809
+loss at step 197200: 2.860589908361435
+validation loss: 3.03695206006368
+validation accuracy: 13.366026711185308%
+loss at step 197400: 2.7560289549827575
+loss at step 197600: 2.6722588086128236
+validation loss: 2.7212424151102703
+validation accuracy: 16.605801335559264%
+loss at step 197800: 2.637205190658569
+loss at step 198000: 2.6139343535900115
+validation loss: 2.6814320627848307
+validation accuracy: 16.976210350584306%
+loss at step 198200: 2.5883463478088378
+loss at step 198400: 2.5851085889339447
+validation loss: 2.655992997487386
+validation accuracy: 16.814482470784643%
+loss at step 198600: 2.556456035375595
+loss at step 198800: 2.543386504650116
+validation loss: 2.6231861400604246
+validation accuracy: 17.58660267111853%
+loss at step 199000: 2.531785055398941
+loss at step 199200: 2.5504683470726013
+validation loss: 2.6330839252471923
+validation accuracy: 17.263146911519197%
+loss at step 199400: 2.5296839654445646
+loss at step 199600: 2.534299111366272
+validation loss: 2.6282834498087566
+validation accuracy: 16.976210350584306%
+loss at step 199800: 2.5313229155540466
+loss at step 200000: 2.526177192926407
+validation loss: 2.6146494356791177
+validation accuracy: 17.341402337228715%
+loss at step 200200: 2.522800600528717
+loss at step 200400: 2.534638947248459
+validation loss: 2.6404205258687337
+validation accuracy: 17.28923205342237%
+loss at step 200600: 2.528719242811203
+loss at step 200800: 2.529071555137634
+validation loss: 2.5921884202957153
+validation accuracy: 18.42132721202003%
+loss at step 201000: 2.5281815898418425
+loss at step 201200: 2.518372175693512
+validation loss: 2.6081914869944254
+validation accuracy: 17.143155258764608%
+loss at step 201400: 2.527905412912369
+loss at step 201600: 2.515570363998413
+validation loss: 2.618729871114095
+validation accuracy: 17.419657762938233%
+loss at step 201800: 2.5216120505332946
+loss at step 202000: 2.5225710999965667
+validation loss: 2.590032164255778
+validation accuracy: 17.52399833055092%
+loss at step 202200: 2.4966225624084473
+loss at step 202400: 2.5007978904247286
+validation loss: 2.5855716292063393
+validation accuracy: 17.95179465776294%
+loss at step 202600: 2.5098602885007857
+loss at step 202800: 2.5256983923912046
+validation loss: 2.587664531071981
+validation accuracy: 17.94136060100167%
+loss at step 203000: 2.521289178133011
+loss at step 203200: 2.502511738538742
+validation loss: 2.5903925768534344
+validation accuracy: 17.445742904841403%
+loss at step 203400: 2.517255730628967
+loss at step 203600: 2.519576133489609
+validation loss: 2.582843332290649
+validation accuracy: 17.628338898163605%
+loss at step 203800: 2.523736025094986
+loss at step 204000: 2.516076236963272
+validation loss: 2.5791650295257567
+validation accuracy: 18.103088480801336%
+loss at step 204200: 2.575110332965851
+loss at step 204400: 2.5346700978279113
+validation loss: 2.6196384970347086
+validation accuracy: 17.273580968280466%
+loss at step 204600: 2.5236273550987245
+loss at step 204800: 2.5140620470046997
+validation loss: 2.5849151770273844
+validation accuracy: 17.482262103505843%
+loss at step 205000: 2.5099112790822984
+loss at step 205200: 2.4951356172561647
+validation loss: 2.567959804534912
+validation accuracy: 17.92049248747913%
+loss at step 205400: 2.515088266134262
+loss at step 205600: 2.5231920671463013
+validation loss: 2.579900271097819
+validation accuracy: 17.748330550918197%
+loss at step 205800: 2.515880947113037
+loss at step 206000: 2.5123695385456086
+validation loss: 2.5767067114512128
+validation accuracy: 18.019616026711187%
+loss at step 206200: 2.5179502391815185
+loss at step 206400: 2.5241555297374725
+validation loss: 2.5679491170247397
+validation accuracy: 17.873539232053425%
+loss at step 206600: 2.5179391932487487
+loss at step 206800: 2.518127778768539
+validation loss: 2.5813773409525553
+validation accuracy: 17.67007512520868%
+loss at step 207000: 2.5176962089538573
+loss at step 207200: 2.5121214747428895
+validation loss: 2.580166629155477
+validation accuracy: 17.247495826377296%
+loss at step 207400: 2.523481732606888
+loss at step 207600: 2.507365715503693
+validation loss: 2.573329515457153
+validation accuracy: 18.00396494156928%
+loss at step 207800: 2.5208501160144805
+loss at step 208000: 2.529620462656021
+validation loss: 2.5780052884419757
+validation accuracy: 17.873539232053425%
+loss at step 208200: 2.502491433620453
+loss at step 208400: 2.5093680989742277
+validation loss: 2.5780596764882406
+validation accuracy: 17.346619365609346%
+loss at step 208600: 2.513057416677475
+loss at step 208800: 2.5093260395526884
+validation loss: 2.571561285654704
+validation accuracy: 17.67007512520868%
+loss at step 209000: 2.5014172732830047
+loss at step 209200: 2.5067321360111237
+validation loss: 2.5673342831929524
+validation accuracy: 18.21786310517529%
+loss at step 209400: 2.5085149073600768
+loss at step 209600: 2.5074166905879975
+validation loss: 2.5608099110921225
+validation accuracy: 18.20221202003339%
+loss at step 209800: 2.530381771326065
+loss at step 210000: 2.52688396692276
+validation loss: 2.5843431504567462
+validation accuracy: 17.5970367278798%
+loss at step 210200: 2.519797660112381
+loss at step 210400: 2.521643930673599
+validation loss: 2.59245078086853
+validation accuracy: 17.82136894824708%
+loss at step 210600: 2.5148898804187776
+loss at step 210800: 2.521553989648819
+validation loss: 2.61314653078715
+validation accuracy: 17.117070116861434%
+loss at step 211000: 2.528917769193649
+loss at step 211200: 2.525619715452194
+validation loss: 2.5868867079416913
+validation accuracy: 17.028380634390654%
+loss at step 211400: 2.5177441704273225
+loss at step 211600: 2.5132982325553894
+validation loss: 2.5747850290934244
+validation accuracy: 17.419657762938233%
+loss at step 211800: 2.5235291218757627
+loss at step 212000: 2.506232863664627
+validation loss: 2.5750932153066
+validation accuracy: 18.035267111853088%
+loss at step 212200: 2.514071147441864
+loss at step 212400: 2.524515697956085
+validation loss: 2.556680301030477
+validation accuracy: 18.483931552587645%
+loss at step 212600: 2.525414386987686
+loss at step 212800: 2.523232616186142
+validation loss: 2.588120554288228
+validation accuracy: 17.685726210350584%
+loss at step 213000: 2.4959337878227235
+loss at step 213200: 2.516639521121979
+validation loss: 2.6216777165730796
+validation accuracy: 17.05968280467446%
+loss at step 213400: 2.507509572505951
+loss at step 213600: 2.4981232750415803
+validation loss: 2.577878662745158
+validation accuracy: 17.81093489148581%
+loss at step 213800: 2.5161621606349946
+loss at step 214000: 2.5138067984580994
+validation loss: 2.584655443827311
+validation accuracy: 17.555300500834726%
+loss at step 214200: 2.5074779415130615
+loss at step 214400: 2.5205210494995116
+validation loss: 2.579434849421183
+validation accuracy: 17.696160267111853%
+loss at step 214600: 2.504593768119812
+loss at step 214800: 2.5298934280872345
+validation loss: 2.6011753940582274
+validation accuracy: 17.46661101836394%
+loss at step 215000: 2.519046368598938
+loss at step 215200: 2.5249557173252106
+validation loss: 2.5690628465016685
+validation accuracy: 17.998747913188648%
+loss at step 215400: 2.5026144897937774
+loss at step 215600: 2.512658097743988
+validation loss: 2.566841395696004
+validation accuracy: 18.035267111853088%
+loss at step 215800: 2.517494868040085
+loss at step 216000: 2.5308860659599306
+validation loss: 2.566215721766154
+validation accuracy: 18.040484140233723%
+loss at step 216200: 2.519888435602188
+loss at step 216400: 2.5077814614772795
+validation loss: 2.5825311279296876
+validation accuracy: 18.150041736227045%
+loss at step 216600: 2.5225593852996826
+loss at step 216800: 2.5139891850948333
+validation loss: 2.5944335365295412
+validation accuracy: 17.257929883138566%
+loss at step 217000: 2.5227246010303497
+loss at step 217200: 2.5038566994667053
+validation loss: 2.5765239906311037
+validation accuracy: 17.873539232053425%
+loss at step 217400: 2.5017360734939573
+loss at step 217600: 2.519781188964844
+validation loss: 2.5823595555623373
+validation accuracy: 18.22829716193656%
+loss at step 217800: 2.5168556821346284
+loss at step 218000: 2.5080748343467714
+validation loss: 2.581590328216553
+validation accuracy: 17.899624373956595%
+loss at step 218200: 2.5159315776824953
+loss at step 218400: 2.4993158662319184
+validation loss: 2.5870204226175946
+validation accuracy: 17.419657762938233%
+loss at step 218600: 2.514965946674347
+loss at step 218800: 2.5267481195926664
+validation loss: 2.564312604268392
+validation accuracy: 18.186560934891485%
+loss at step 219000: 2.499507668018341
+loss at step 219200: 2.5190427243709563
+validation loss: 2.5931601492563883
+validation accuracy: 17.743113522537563%
+loss at step 219400: 2.5182640385627746
+loss at step 219600: 2.4995792365074156
+validation loss: 2.575861940383911
+validation accuracy: 18.092654424040067%
+loss at step 219800: 2.5330201983451843
+loss at step 220000: 2.521064523458481
+validation loss: 2.6011774412790936
+validation accuracy: 17.60225375626043%
+loss at step 220200: 2.5069338417053224
+loss at step 220400: 2.5173315453529357
+validation loss: 2.562608437538147
+validation accuracy: 18.11873956594324%
+loss at step 220600: 2.4886898469924925
+loss at step 220800: 2.5102935671806335
+validation loss: 2.5630653444925944
+validation accuracy: 18.624791318864776%
+loss at step 221000: 2.5304509556293486
+loss at step 221200: 2.5093372976779937
+validation loss: 2.5576584116617838
+validation accuracy: 18.718697829716195%
+loss at step 221400: 2.5147947168350218
+loss at step 221600: 2.519251508116722
+validation loss: 2.584127279917399
+validation accuracy: 17.769198664440736%
+loss at step 221800: 2.495180094242096
+loss at step 222000: 2.5343123161792755
+validation loss: 2.5762307325998943
+validation accuracy: 17.962228714524205%
+loss at step 222200: 2.517125426530838
+loss at step 222400: 2.5130620086193085
+validation loss: 2.562500425974528
+validation accuracy: 18.066569282136896%
+loss at step 222600: 2.5123913860321045
+loss at step 222800: 2.5124878334999083
+validation loss: 2.591034262975057
+validation accuracy: 17.89440734557596%
+loss at step 223000: 2.5014632964134216
+loss at step 223200: 2.5138240003585817
+validation loss: 2.573513402938843
+validation accuracy: 17.5970367278798%
+loss at step 223400: 2.5277354192733763
+loss at step 223600: 2.506548186540604
+validation loss: 2.5768483034769694
+validation accuracy: 17.64398998330551%
+loss at step 223800: 2.5172114253044127
+loss at step 224000: 2.5003600883483887
+validation loss: 2.5678564993540447
+validation accuracy: 17.993530884808013%
+loss at step 224200: 2.5241450572013857
+epoch 6
+loss at step 224400: 2.518910509347916
+validation loss: 2.586052309672038
+validation accuracy: 17.64398998330551%
+loss at step 224600: 2.4879051446914673
+loss at step 224800: 2.4997022449970245
+validation loss: 2.5738090356191
+validation accuracy: 18.06135225375626%
+loss at step 225000: 2.4838585829734803
+loss at step 225200: 2.499968721866608
+validation loss: 2.5778267939885455
+validation accuracy: 17.263146911519197%
+loss at step 225400: 2.5042125368118286
+loss at step 225600: 2.519815365076065
+validation loss: 2.5594133726755777
+validation accuracy: 18.53610183639399%
+loss at step 225800: 2.4928012907505037
+loss at step 226000: 2.4948977720737457
+validation loss: 2.5834561157226563
+validation accuracy: 18.22829716193656%
+loss at step 226200: 2.5103633391857145
+loss at step 226400: 2.5068189990520477
+validation loss: 2.5735302448272703
+validation accuracy: 17.94136060100167%
+loss at step 226600: 2.5091737794876097
+loss at step 226800: 2.5220739698410033
+validation loss: 2.597692724863688
+validation accuracy: 18.196994991652755%
+loss at step 227000: 2.5116253328323364
+loss at step 227200: 2.494173089265823
+validation loss: 2.583488810857137
+validation accuracy: 18.176126878130216%
+loss at step 227400: 2.4956672298908233
+loss at step 227600: 2.514226702451706
+validation loss: 2.5824890391031903
+validation accuracy: 18.316986644407347%
+loss at step 227800: 2.4978124570846556
+loss at step 228000: 2.493335201740265
+validation loss: 2.5875335852305095
+validation accuracy: 17.445742904841403%
+loss at step 228200: 2.4949584889411924
+loss at step 228400: 2.493356018066406
+validation loss: 2.5627608712514243
+validation accuracy: 18.196994991652755%
+loss at step 228600: 2.5124583053588867
+loss at step 228800: 2.497441303730011
+validation loss: 2.575809078216553
+validation accuracy: 18.009181969949918%
+loss at step 229000: 2.486477860212326
+loss at step 229200: 2.514333176612854
+validation loss: 2.558319803873698
+validation accuracy: 17.831803005008346%
+loss at step 229400: 2.487296071052551
+loss at step 229600: 2.498216760158539
+validation loss: 2.5520367495218914
+validation accuracy: 18.44219532554257%
+loss at step 229800: 2.4949185812473296
+loss at step 230000: 2.516467646360397
+validation loss: 2.5838526662190757
+validation accuracy: 17.863105175292155%
+loss at step 230200: 2.524153324365616
+loss at step 230400: 2.5121229124069213
+validation loss: 2.631493943532308
+validation accuracy: 15.040692821368948%
+loss at step 230600: 2.51529149889946
+loss at step 230800: 2.49394939661026
+validation loss: 2.581883017222087
+validation accuracy: 18.39524207011686%
+loss at step 231000: 2.5128933000564575
+loss at step 231200: 2.4986830627918244
+validation loss: 2.551326109568278
+validation accuracy: 18.48914858096828%
+loss at step 231400: 2.534264396429062
+loss at step 231600: 2.4880885112285616
+validation loss: 2.5770455344518024
+validation accuracy: 18.113522537562606%
+loss at step 231800: 2.4827525544166567
+loss at step 232000: 2.500947312116623
+validation loss: 2.574586585362752
+validation accuracy: 18.165692821368946%
+loss at step 232200: 2.502802391052246
+loss at step 232400: 2.5133446109294892
+validation loss: 2.5739482657114663
+validation accuracy: 18.050918196994992%
+loss at step 232600: 2.509572449922562
+loss at step 232800: 2.495715700387955
+validation loss: 2.570934445063273
+validation accuracy: 18.478714524207014%
+loss at step 233000: 2.5041282033920287
+loss at step 233200: 2.522416676282883
+validation loss: 2.549829168319702
+validation accuracy: 18.619574290484138%
+loss at step 233400: 2.513217895030975
+loss at step 233600: 2.501563683748245
+validation loss: 2.5635537115732827
+validation accuracy: 18.12917362270451%
+loss at step 233800: 2.502649714946747
+loss at step 234000: 2.503137503862381
+validation loss: 2.5730343023935953
+validation accuracy: 17.82658597662771%
+loss at step 234200: 2.5064172637462616
+loss at step 234400: 2.5155600893497465
+validation loss: 2.5596431827545167
+validation accuracy: 18.43697829716194%
+loss at step 234600: 2.506696673631668
+loss at step 234800: 2.504565955400467
+validation loss: 2.5665863450368245
+validation accuracy: 18.25959933222037%
+loss at step 235000: 2.5126483964920046
+loss at step 235200: 2.5133814716339113
+validation loss: 2.5791124534606933
+validation accuracy: 17.795283806343907%
+loss at step 235400: 2.5069784712791443
+loss at step 235600: 2.5063302528858187
+validation loss: 2.5549726422627765
+validation accuracy: 17.863105175292155%
+loss at step 235800: 2.498029019832611
+loss at step 236000: 2.493316035270691
+validation loss: 2.577939176559448
+validation accuracy: 17.899624373956595%
+loss at step 236200: 2.5110012340545653
+loss at step 236400: 2.4884878039360045
+validation loss: 2.576660092671712
+validation accuracy: 17.957011686143574%
+loss at step 236600: 2.5228881323337555
+loss at step 236800: 2.504883189201355
+validation loss: 2.5694147396087645
+validation accuracy: 18.0978714524207%
+loss at step 237000: 2.5097147631645202
+loss at step 237200: 2.5032016694545747
+validation loss: 2.591846539179484
+validation accuracy: 17.84745409015025%
+loss at step 237400: 2.5050563275814057
+loss at step 237600: 2.512698848247528
+validation loss: 2.5867915884653727
+validation accuracy: 17.696160267111853%
+loss at step 237800: 2.4833922731876372
+loss at step 238000: 2.5086090302467348
+validation loss: 2.56888557434082
+validation accuracy: 17.743113522537563%
+loss at step 238200: 2.5020549738407136
+loss at step 238400: 2.5167177331447603
+validation loss: 2.567557452519735
+validation accuracy: 18.207429048414024%
+loss at step 238600: 2.496008532047272
+loss at step 238800: 2.4974275267124177
+validation loss: 2.5653484598795573
+validation accuracy: 17.90484140233723%
+loss at step 239000: 2.4986597073078154
+loss at step 239200: 2.5079751586914063
+validation loss: 2.5616948986053467
+validation accuracy: 17.873539232053425%
+loss at step 239400: 2.5032594347000123
+loss at step 239600: 2.5057295525074004
+validation loss: 2.5673319403330486
+validation accuracy: 18.0978714524207%
+loss at step 239800: 2.4934835374355315
+loss at step 240000: 2.5168620467185976
+validation loss: 2.563404630025228
+validation accuracy: 18.483931552587645%
+loss at step 240200: 2.5032412362098695
+loss at step 240400: 2.519811745882034
+validation loss: 2.5607813676198323
+validation accuracy: 18.301335559265443%
+loss at step 240600: 2.5291189479827882
+loss at step 240800: 2.4979998373985293
+validation loss: 2.5643302090962727
+validation accuracy: 17.983096828046744%
+loss at step 241000: 2.495674637556076
+loss at step 241200: 2.5040613901615143
+validation loss: 2.571218285560608
+validation accuracy: 17.5970367278798%
+loss at step 241400: 2.52224182844162
+loss at step 241600: 2.503309563398361
+validation loss: 2.5573379135131837
+validation accuracy: 18.337854757929883%
+loss at step 241800: 2.52077029466629
+loss at step 242000: 2.486110351085663
+validation loss: 2.5476370239257813
+validation accuracy: 18.22308013355593%
+loss at step 242200: 2.5157501316070556
+loss at step 242400: 2.529500571489334
+validation loss: 2.55121905485789
+validation accuracy: 18.25959933222037%
+loss at step 242600: 2.5035526978969576
+loss at step 242800: 2.5068796026706694
+validation loss: 2.5870766162872316
+validation accuracy: 17.560517529215357%
+loss at step 243000: 2.506467206478119
+loss at step 243200: 2.525124685764313
+validation loss: 2.5603155771891277
+validation accuracy: 18.650876460767947%
+loss at step 243400: 2.4969009876251222
+loss at step 243600: 2.5240409910678863
+validation loss: 2.609158903757731
+validation accuracy: 17.362270450751254%
+loss at step 243800: 2.50776780128479
+loss at step 244000: 2.506806514263153
+validation loss: 2.5676176420847576
+validation accuracy: 18.290901502504173%
+loss at step 244200: 2.4994645285606385
+loss at step 244400: 2.4907204508781433
+validation loss: 2.5551768652598064
+validation accuracy: 18.170909849749584%
+loss at step 244600: 2.4989084541797637
+loss at step 244800: 2.5044511806964875
+validation loss: 2.5676741154988605
+validation accuracy: 18.019616026711187%
+loss at step 245000: 2.4941124069690703
+loss at step 245200: 2.5267867755889895
+validation loss: 2.563434206644694
+validation accuracy: 18.390025041736227%
+loss at step 245400: 2.50300155878067
+loss at step 245600: 2.503392938375473
+validation loss: 2.579548063278198
+validation accuracy: 17.38313856427379%
+loss at step 245800: 2.524575388431549
+loss at step 246000: 2.51493691444397
+validation loss: 2.5620976893107095
+validation accuracy: 17.936143572621035%
+loss at step 246200: 2.5088919031620027
+loss at step 246400: 2.4816589796543123
+validation loss: 2.555742664337158
+validation accuracy: 18.35872287145242%
+loss at step 246600: 2.509226562976837
+loss at step 246800: 2.524493633508682
+validation loss: 2.589264341990153
+validation accuracy: 17.435308848080133%
+loss at step 247000: 2.5044328331947328
+loss at step 247200: 2.51639781832695
+validation loss: 2.6497784264882407
+validation accuracy: 15.030258764607678%
+loss at step 247400: 2.5193993389606475
+loss at step 247600: 2.502337307929993
+validation loss: 2.5706662559509277
+validation accuracy: 18.39524207011686%
+loss at step 247800: 2.4984009063243864
+loss at step 248000: 2.5003653466701508
+validation loss: 2.561365540822347
+validation accuracy: 17.84745409015025%
+loss at step 248200: 2.4941969776153563
+loss at step 248400: 2.5080763971805573
+validation loss: 2.5696706581115722
+validation accuracy: 17.983096828046744%
+loss at step 248600: 2.4974622666835784
+loss at step 248800: 2.4963205087184908
+validation loss: 2.5518522453308106
+validation accuracy: 18.170909849749584%
+loss at step 249000: 2.502170112133026
+loss at step 249200: 2.5056279718875887
+validation loss: 2.5562558778127036
+validation accuracy: 18.066569282136896%
+loss at step 249400: 2.505941299200058
+loss at step 249600: 2.493114664554596
+validation loss: 2.5444024785359702
+validation accuracy: 18.515233722871454%
+loss at step 249800: 2.516487411260605
+loss at step 250000: 2.507831462621689
+validation loss: 2.549780149459839
+validation accuracy: 18.066569282136896%
+loss at step 250200: 2.4908648133277893
+loss at step 250400: 2.4944706213474275
+validation loss: 2.573590695063273
+validation accuracy: 17.83702003338898%
+loss at step 250600: 2.4973065316677094
+loss at step 250800: 2.537472867965698
+validation loss: 2.5455724080403646
+validation accuracy: 18.630008347245408%
+loss at step 251000: 2.4848849630355834
+loss at step 251200: 2.4719062602519988
+validation loss: 2.57149632136027
+validation accuracy: 18.10830550918197%
+loss at step 251400: 2.4907300674915316
+loss at step 251600: 2.494394194483757
+validation loss: 2.5523095734914145
+validation accuracy: 18.181343906510854%
+loss at step 251800: 2.5010376167297363
+loss at step 252000: 2.486279766559601
+validation loss: 2.5607512601216635
+validation accuracy: 19.099540901502504%
+loss at step 252200: 2.491117515563965
+loss at step 252400: 2.4927999913692473
+validation loss: 2.5689771366119385
+validation accuracy: 18.243948247078464%
+loss at step 252600: 2.498381588459015
+loss at step 252800: 2.5140268206596375
+validation loss: 2.562604373296102
+validation accuracy: 17.85788814691152%
+loss at step 253000: 2.5143656754493713
+loss at step 253200: 2.496167039871216
+validation loss: 2.574942077000936
+validation accuracy: 17.37270450751252%
+loss at step 253400: 2.501407744884491
+loss at step 253600: 2.5093622189760207
+validation loss: 2.567565120061239
+validation accuracy: 18.254382303839733%
+loss at step 253800: 2.499280730485916
+loss at step 254000: 2.4851179718971252
+validation loss: 2.55137406984965
+validation accuracy: 18.301335559265443%
+loss at step 254200: 2.513565399646759
+loss at step 254400: 2.515355316400528
+validation loss: 2.5713680013020834
+validation accuracy: 18.35872287145242%
+loss at step 254600: 2.495333627462387
+loss at step 254800: 2.474876263141632
+validation loss: 2.5610828526814777
+validation accuracy: 18.374373956594322%
+loss at step 255000: 2.4825308310985563
+loss at step 255200: 2.5044892656803133
+validation loss: 2.5566622734069826
+validation accuracy: 18.562186978297163%
+loss at step 255400: 2.5009722220897674
+loss at step 255600: 2.5059665191173552
+validation loss: 2.5640459219614664
+validation accuracy: 17.91005843071786%
+loss at step 255800: 2.5034937357902525
+loss at step 256000: 2.502078553438187
+validation loss: 2.578090550104777
+validation accuracy: 17.998747913188648%
+loss at step 256200: 2.48320293545723
+loss at step 256400: 2.526855809688568
+validation loss: 2.564681386947632
+validation accuracy: 17.91005843071786%
+loss at step 256600: 2.4977968657016754
+loss at step 256800: 2.5081054949760437
+validation loss: 2.587001469930013
+validation accuracy: 17.84745409015025%
+loss at step 257000: 2.5056714677810668
+loss at step 257200: 2.4989499020576478
+validation loss: 2.5531811332702636
+validation accuracy: 18.72913188647746%
+loss at step 257400: 2.490778297185898
+loss at step 257600: 2.486749143600464
+validation loss: 2.558114999135335
+validation accuracy: 18.270033388981634%
+loss at step 257800: 2.51249747633934
+loss at step 258000: 2.5191775357723234
+validation loss: 2.5626970450083415
+validation accuracy: 18.243948247078464%
+loss at step 258200: 2.4869917607307435
+loss at step 258400: 2.496551662683487
+validation loss: 2.5565964635213216
+validation accuracy: 18.20221202003339%
+loss at step 258600: 2.498654147386551
+loss at step 258800: 2.497300865650177
+validation loss: 2.544054358800252
+validation accuracy: 18.11873956594324%
+loss at step 259000: 2.481832984685898
+loss at step 259200: 2.513122719526291
+validation loss: 2.540171982447306
+validation accuracy: 18.52045075125209%
+loss at step 259400: 2.4886598592996596
+loss at step 259600: 2.4958016753196715
+validation loss: 2.5694118563334145
+validation accuracy: 17.85788814691152%
+loss at step 259800: 2.500483913421631
+loss at step 260000: 2.5067454916238785
+validation loss: 2.560758810043335
+validation accuracy: 18.44219532554257%
+loss at step 260200: 2.505477337837219
+loss at step 260400: 2.509411960840225
+validation loss: 2.582892605463664
+validation accuracy: 18.181343906510854%
+loss at step 260600: 2.4835624361038207
+loss at step 260800: 2.493924493789673
+validation loss: 2.581752382914225
+validation accuracy: 18.348288814691152%
+loss at step 261000: 2.4905881202220916
+loss at step 261200: 2.5076793134212494
+validation loss: 2.614253419240316
+validation accuracy: 17.92049248747913%
+loss at step 261400: 2.5015561926364898
+loss at step 261600: 2.471244407892227
+validation loss: 2.5573728466033936
+validation accuracy: 18.337854757929883%
+epoch 7
+loss at step 261800: 2.4899923360347747
+loss at step 262000: 2.5002502846717833
+validation loss: 2.5719670836130777
+validation accuracy: 18.00396494156928%
+loss at step 262200: 2.4920906972885133
+loss at step 262400: 2.494265147447586
+validation loss: 2.5401805305480956
+validation accuracy: 18.911727879799667%
+loss at step 262600: 2.499551844596863
+loss at step 262800: 2.4909881168603896
+validation loss: 2.5379717445373533
+validation accuracy: 18.75%
+loss at step 263000: 2.4990116608142854
+loss at step 263200: 2.4950594627857208
+validation loss: 2.5702781867980957
+validation accuracy: 17.889190317195325%
+loss at step 263400: 2.509493703842163
+loss at step 263600: 2.4935977458953857
+validation loss: 2.562192055384318
+validation accuracy: 18.066569282136896%
+loss at step 263800: 2.48058487534523
+loss at step 264000: 2.4902709913253784
+validation loss: 2.5807955646514893
+validation accuracy: 17.82658597662771%
+loss at step 264200: 2.4957326185703277
+loss at step 264400: 2.4906543612480165
+validation loss: 2.5578991095225017
+validation accuracy: 18.551752921535893%
+loss at step 264600: 2.488314288854599
+loss at step 264800: 2.4880509221553804
+validation loss: 2.5681476259231566
+validation accuracy: 18.103088480801336%
+loss at step 265000: 2.484117052555084
+loss at step 265200: 2.4688667678833007
+validation loss: 2.541374422709147
+validation accuracy: 18.233514190317194%
+loss at step 265400: 2.49112557053566
+loss at step 265600: 2.498018791675568
+validation loss: 2.5641040802001953
+validation accuracy: 18.562186978297163%
+loss at step 265800: 2.5000467801094057
+loss at step 266000: 2.498250193595886
+validation loss: 2.5451668008168538
+validation accuracy: 18.400459098497496%
+loss at step 266200: 2.4788608956336975
+loss at step 266400: 2.4847163450717926
+validation loss: 2.560160175959269
+validation accuracy: 17.805717863105176%
+loss at step 266600: 2.5029291594028473
+loss at step 266800: 2.501135379076004
+validation loss: 2.5530458863576255
+validation accuracy: 18.363939899833053%
+loss at step 267000: 2.494692598581314
+loss at step 267200: 2.474864192008972
+validation loss: 2.552464106877645
+validation accuracy: 18.077003338898166%
+loss at step 267400: 2.4950183176994325
+loss at step 267600: 2.5118060410022736
+validation loss: 2.576211160024007
+validation accuracy: 18.243948247078464%
+loss at step 267800: 2.5034739005565645
+loss at step 268000: 2.499776816368103
+validation loss: 2.571206792195638
+validation accuracy: 18.0978714524207%
+loss at step 268200: 2.4990905213356016
+loss at step 268400: 2.51480544924736
+validation loss: 2.562147487004598
+validation accuracy: 17.82658597662771%
+loss at step 268600: 2.502550767660141
+loss at step 268800: 2.4967117261886598
+validation loss: 2.5571665541330972
+validation accuracy: 18.030050083472453%
+loss at step 269000: 2.4943676662445067
+loss at step 269200: 2.4829708528518677
+validation loss: 2.5492915884653726
+validation accuracy: 18.379590984974957%
+loss at step 269400: 2.489534691572189
+loss at step 269600: 2.486661536693573
+validation loss: 2.545365482966105
+validation accuracy: 18.233514190317194%
+loss at step 269800: 2.5036662817001343
+loss at step 270000: 2.499447457790375
+validation loss: 2.5424747180938723
+validation accuracy: 18.46306343906511%
+loss at step 270200: 2.48564808011055
+loss at step 270400: 2.4909412169456484
+validation loss: 2.5517892360687258
+validation accuracy: 18.207429048414024%
+loss at step 270600: 2.4779080212116242
+loss at step 270800: 2.4720406782627107
+validation loss: 2.5569984277089435
+validation accuracy: 17.946577629382304%
+loss at step 271000: 2.502750334143639
+loss at step 271200: 2.4998513150215147
+validation loss: 2.5705314668019614
+validation accuracy: 17.732679465776293%
+loss at step 271400: 2.492680449485779
+loss at step 271600: 2.517127556800842
+validation loss: 2.5437435499827066
+validation accuracy: 18.13439065108514%
+loss at step 271800: 2.490425173044205
+loss at step 272000: 2.487949209213257
+validation loss: 2.548485256830851
+validation accuracy: 18.264816360601003%
+loss at step 272200: 2.4911364418268205
+loss at step 272400: 2.4908482217788697
+validation loss: 2.554000940322876
+validation accuracy: 18.781302170283805%
+loss at step 272600: 2.4870639181137086
+loss at step 272800: 2.477058333158493
+validation loss: 2.5503138287862144
+validation accuracy: 19.089106844741234%
+loss at step 273000: 2.490607911348343
+loss at step 273200: 2.51497807264328
+validation loss: 2.57461049079895
+validation accuracy: 17.95179465776294%
+loss at step 273400: 2.488014533519745
+loss at step 273600: 2.499730209112167
+validation loss: 2.5620780404408774
+validation accuracy: 18.196994991652755%
+loss at step 273800: 2.498736197948456
+loss at step 274000: 2.495892496109009
+validation loss: 2.565959555308024
+validation accuracy: 18.103088480801336%
+loss at step 274200: 2.480783873796463
+loss at step 274400: 2.4839771008491516
+validation loss: 2.5628516419728595
+validation accuracy: 18.103088480801336%
+loss at step 274600: 2.4765416038036348
+loss at step 274800: 2.512496516704559
+validation loss: 2.5506979433695474
+validation accuracy: 18.80738731218698%
+loss at step 275000: 2.4981634962558745
+loss at step 275200: 2.5003921282291413
+validation loss: 2.5582024987538654
+validation accuracy: 18.275250417362273%
+loss at step 275400: 2.4936729085445406
+loss at step 275600: 2.4669923216104506
+validation loss: 2.548083775838216
+validation accuracy: 18.671744574290482%
+loss at step 275800: 2.509990713596344
+loss at step 276000: 2.509620552062988
+validation loss: 2.581487668355306
+validation accuracy: 17.55008347245409%
+loss at step 276200: 2.4927366077899933
+loss at step 276400: 2.4769074046611785
+validation loss: 2.556943737665812
+validation accuracy: 18.66652754590985%
+loss at step 276600: 2.506388373374939
+loss at step 276800: 2.4967975175380706
+validation loss: 2.5421710427602133
+validation accuracy: 18.160475792988315%
+loss at step 277000: 2.495457787513733
+loss at step 277200: 2.4905702435970305
+validation loss: 2.5519177182515462
+validation accuracy: 18.42654424040067%
+loss at step 277400: 2.5020199215412138
+loss at step 277600: 2.5098135542869566
+validation loss: 2.547805682818095
+validation accuracy: 18.906510851419032%
+loss at step 277800: 2.4954515993595123
+loss at step 278000: 2.4915499198436737
+validation loss: 2.545104153951009
+validation accuracy: 18.270033388981634%
+loss at step 278200: 2.5038357150554655
+loss at step 278400: 2.4791252517700197
+validation loss: 2.5567207527160645
+validation accuracy: 18.254382303839733%
+loss at step 278600: 2.5044238817691804
+loss at step 278800: 2.4896549570560453
+validation loss: 2.577021338144938
+validation accuracy: 17.889190317195325%
+loss at step 279000: 2.481929049491882
+loss at step 279200: 2.49711275100708
+validation loss: 2.5550771045684812
+validation accuracy: 17.717028380634392%
+loss at step 279400: 2.4881616330146787
+loss at step 279600: 2.4921292674541475
+validation loss: 2.5539430967966714
+validation accuracy: 19.14127712854758%
+loss at step 279800: 2.4936748862266542
+loss at step 280000: 2.4983672773838044
+validation loss: 2.551681480407715
+validation accuracy: 18.243948247078464%
+loss at step 280200: 2.4851862561702727
+loss at step 280400: 2.4931609404087065
+validation loss: 2.5556456438700357
+validation accuracy: 18.22829716193656%
+loss at step 280600: 2.4787970852851866
+loss at step 280800: 2.4807640397548676
+validation loss: 2.563414460817973
+validation accuracy: 18.280467445742904%
+loss at step 281000: 2.48894482254982
+loss at step 281200: 2.4966485023498537
+validation loss: 2.5337574990590412
+validation accuracy: 18.48914858096828%
+loss at step 281400: 2.499468318223953
+loss at step 281600: 2.5050097239017486
+validation loss: 2.5492112159729006
+validation accuracy: 18.504799666110184%
+loss at step 281800: 2.503861483335495
+loss at step 282000: 2.5057240927219393
+validation loss: 2.5550191529591877
+validation accuracy: 18.21786310517529%
+loss at step 282200: 2.494058883190155
+loss at step 282400: 2.4813786113262175
+validation loss: 2.5393840821584064
+validation accuracy: 18.551752921535893%
+loss at step 282600: 2.4851418495178224
+loss at step 282800: 2.479356726408005
+validation loss: 2.548103167215983
+validation accuracy: 18.791736227045075%
+loss at step 283000: 2.4994269788265226
+loss at step 283200: 2.486742537021637
+validation loss: 2.5596508661905926
+validation accuracy: 18.708263772954925%
+loss at step 283400: 2.4841504168510435
+loss at step 283600: 2.4830615556240083
+validation loss: 2.5592410564422607
+validation accuracy: 18.009181969949918%
+loss at step 283800: 2.4888338112831114
+loss at step 284000: 2.4967377376556397
+validation loss: 2.5652036380767824
+validation accuracy: 18.65609348914858%
+loss at step 284200: 2.513112248182297
+loss at step 284400: 2.497219741344452
+validation loss: 2.5374413458506266
+validation accuracy: 18.515233722871454%
+loss at step 284600: 2.488095679283142
+loss at step 284800: 2.4840906888246534
+validation loss: 2.5373231601715087
+validation accuracy: 18.859557595993323%
+loss at step 285000: 2.4868843859434127
+loss at step 285200: 2.500295535326004
+validation loss: 2.534407456715902
+validation accuracy: 18.854340567612688%
+loss at step 285400: 2.4835595601797102
+loss at step 285600: 2.488286942243576
+validation loss: 2.5369392108917235
+validation accuracy: 18.849123539232053%
+loss at step 285800: 2.4824230599403383
+loss at step 286000: 2.480979081392288
+validation loss: 2.5478764740626016
+validation accuracy: 18.348288814691152%
+loss at step 286200: 2.5041027331352232
+loss at step 286400: 2.49918542265892
+validation loss: 2.560764414469401
+validation accuracy: 18.42654424040067%
+loss at step 286600: 2.489174962043762
+loss at step 286800: 2.5014884674549105
+validation loss: 2.5453229109446207
+validation accuracy: 18.755217028380635%
+loss at step 287000: 2.480737314224243
+loss at step 287200: 2.486824232339859
+validation loss: 2.5487203566233316
+validation accuracy: 18.447412353923205%
+loss at step 287400: 2.494720781445503
+loss at step 287600: 2.4945902121067047
+validation loss: 2.543127765655518
+validation accuracy: 18.384808013355592%
+loss at step 287800: 2.506131656169891
+loss at step 288000: 2.4958689510822296
+validation loss: 2.534538469314575
+validation accuracy: 18.708263772954925%
+loss at step 288200: 2.495095273256302
+loss at step 288400: 2.487615362405777
+validation loss: 2.551173276901245
+validation accuracy: 18.483931552587645%
+loss at step 288600: 2.4838620483875276
+loss at step 288800: 2.4903761744499207
+validation loss: 2.5500727192560833
+validation accuracy: 18.619574290484138%
+loss at step 289000: 2.488226057291031
+loss at step 289200: 2.5029135930538176
+validation loss: 2.5441183026631675
+validation accuracy: 18.02483305509182%
+loss at step 289400: 2.4817254829406736
+loss at step 289600: 2.4959288102388384
+validation loss: 2.5529266579945884
+validation accuracy: 18.113522537562606%
+loss at step 289800: 2.4985180950164794
+loss at step 290000: 2.478673137426376
+validation loss: 2.547356230417887
+validation accuracy: 18.12395659432387%
+loss at step 290200: 2.4812478649616243
+loss at step 290400: 2.4851715683937075
+validation loss: 2.620677989323934
+validation accuracy: 15.322412353923207%
+loss at step 290600: 2.496791101694107
+loss at step 290800: 2.4931242406368255
+validation loss: 2.5476456594467165
+validation accuracy: 18.80738731218698%
+loss at step 291000: 2.4733781135082245
+loss at step 291200: 2.4776223254203797
+validation loss: 2.542631244659424
+validation accuracy: 18.42132721202003%
+loss at step 291400: 2.4873076248168946
+loss at step 291600: 2.508499232530594
+validation loss: 2.5403462187449137
+validation accuracy: 18.708263772954925%
+loss at step 291800: 2.4701634991168975
+loss at step 292000: 2.487571809887886
+validation loss: 2.54937105178833
+validation accuracy: 18.791736227045075%
+loss at step 292200: 2.489895066022873
+loss at step 292400: 2.4732352685928345
+validation loss: 2.5627841186523437
+validation accuracy: 17.97787979966611%
+loss at step 292600: 2.4818875324726104
+loss at step 292800: 2.4663447070121767
+validation loss: 2.5600503428777057
+validation accuracy: 18.21264607679466%
+loss at step 293000: 2.4814086759090426
+loss at step 293200: 2.4791201865673065
+validation loss: 2.555200252532959
+validation accuracy: 18.958681135225376%
+loss at step 293400: 2.4860023736953734
+loss at step 293600: 2.4706906712055208
+validation loss: 2.578303607304891
+validation accuracy: 17.98831385642738%
+loss at step 293800: 2.4806673669815065
+loss at step 294000: 2.493609163761139
+validation loss: 2.552943000793457
+validation accuracy: 18.233514190317194%
+loss at step 294200: 2.4956028175354006
+loss at step 294400: 2.501054264307022
+validation loss: 2.5712681420644126
+validation accuracy: 18.48914858096828%
+loss at step 294600: 2.503813486099243
+loss at step 294800: 2.4991531336307524
+validation loss: 2.552125705083211
+validation accuracy: 18.473497495826376%
+loss at step 295000: 2.476367826461792
+loss at step 295200: 2.4795108318328856
+validation loss: 2.550974384943644
+validation accuracy: 18.160475792988315%
+loss at step 295400: 2.4866211915016176
+loss at step 295600: 2.490626792907715
+validation loss: 2.53276974995931
+validation accuracy: 18.890859766277128%
+loss at step 295800: 2.496944440603256
+loss at step 296000: 2.496100800037384
+validation loss: 2.5345122973124186
+validation accuracy: 18.76043405676127%
+loss at step 296200: 2.4828486013412476
+loss at step 296400: 2.504535689353943
+validation loss: 2.565611990292867
+validation accuracy: 18.103088480801336%
+loss at step 296600: 2.466807121038437
+loss at step 296800: 2.4931161046028136
+validation loss: 2.5556083742777504
+validation accuracy: 18.170909849749584%
+loss at step 297000: 2.497913395166397
+loss at step 297200: 2.4746077919006346
+validation loss: 2.5470531749725343
+validation accuracy: 18.170909849749584%
+loss at step 297400: 2.4865139150619506
+loss at step 297600: 2.5023700392246244
+validation loss: 2.536523462931315
+validation accuracy: 18.614357262103507%
+loss at step 297800: 2.490605162382126
+loss at step 298000: 2.4878406536579134
+validation loss: 2.552383629480998
+validation accuracy: 18.551752921535893%
+loss at step 298200: 2.47208376288414
+loss at step 298400: 2.486069293022156
+validation loss: 2.5337152671813965
+validation accuracy: 18.849123539232053%
+loss at step 298600: 2.4950308489799498
+loss at step 298800: 2.4957898807525636
+validation loss: 2.5615221722920736
+validation accuracy: 18.353505843071787%
+loss at step 299000: 2.5052032697200777
+epoch 8
+loss at step 299200: 2.4999117732048033
+validation loss: 2.5352525520324707
+validation accuracy: 18.82303839732888%
+loss at step 299400: 2.4915458333492277
+loss at step 299600: 2.4796189320087434
+validation loss: 2.544123853047689
+validation accuracy: 18.306552587646078%
+loss at step 299800: 2.4907670783996583
+loss at step 300000: 2.4820732140541075
+validation loss: 2.557784843444824
+validation accuracy: 18.40567612687813%
+loss at step 300200: 2.4881621968746184
+loss at step 300400: 2.4850129115581514
+validation loss: 2.5333957131703695
+validation accuracy: 18.82303839732888%
+loss at step 300600: 2.491301052570343
+loss at step 300800: 2.4834826195240023
+validation loss: 2.5469799137115476
+validation accuracy: 18.337854757929883%
+loss at step 301000: 2.4885082709789277
+loss at step 301200: 2.5045949566364287
+validation loss: 2.546727434794108
+validation accuracy: 18.25959933222037%
+loss at step 301400: 2.4732668364048003
+loss at step 301600: 2.4949400877952574
+validation loss: 2.5548031330108643
+validation accuracy: 18.635225375626042%
+loss at step 301800: 2.4803838932514193
+loss at step 302000: 2.4673983490467073
+validation loss: 2.5344345156351724
+validation accuracy: 18.650876460767947%
+loss at step 302200: 2.477018753290176
+loss at step 302400: 2.4688169455528257
+validation loss: 2.534393097559611
+validation accuracy: 18.67696160267112%
+loss at step 302600: 2.4849618244171143
+loss at step 302800: 2.4703460156917574
+validation loss: 2.5495072905222576
+validation accuracy: 18.478714524207014%
+loss at step 303000: 2.4843955492973326
+loss at step 303200: 2.467189838886261
+validation loss: 2.537959992090861
+validation accuracy: 18.301335559265443%
+loss at step 303400: 2.4742201912403106
+loss at step 303600: 2.49792219042778
+validation loss: 2.5561011346181233
+validation accuracy: 18.327420701168613%
+loss at step 303800: 2.476638249158859
+loss at step 304000: 2.4891067016124726
+validation loss: 2.573048610687256
+validation accuracy: 18.588272120200333%
+loss at step 304200: 2.465021452307701
+loss at step 304400: 2.4724136924743654
+validation loss: 2.5494273567199706
+validation accuracy: 18.630008347245408%
+loss at step 304600: 2.4768963301181794
+loss at step 304800: 2.4890278899669647
+validation loss: 2.550153207778931
+validation accuracy: 18.0978714524207%
+loss at step 305000: 2.474024542570114
+loss at step 305200: 2.4831203174591066
+validation loss: 2.6764764022827148
+validation accuracy: 15.30154424040067%
+loss at step 305400: 2.465831302404404
+loss at step 305600: 2.4971957314014435
+validation loss: 2.556335442860921
+validation accuracy: 18.15525876460768%
+loss at step 305800: 2.464586441516876
+loss at step 306000: 2.4991508615016937
+validation loss: 2.5605909252166748
+validation accuracy: 18.050918196994992%
+loss at step 306200: 2.492711287736893
+loss at step 306400: 2.4791538763046264
+validation loss: 2.5360625171661377
+validation accuracy: 18.562186978297163%
+loss at step 306600: 2.487584798336029
+loss at step 306800: 2.4933326959609987
+validation loss: 2.5450311787923177
+validation accuracy: 18.28568447412354%
+loss at step 307000: 2.481344975233078
+loss at step 307200: 2.4680192136764525
+validation loss: 2.5398411623636883
+validation accuracy: 18.885642737896493%
+loss at step 307400: 2.4858782196044924
+loss at step 307600: 2.4595083951950074
+validation loss: 2.5454806836446124
+validation accuracy: 19.256051752921536%
+loss at step 307800: 2.476627177000046
+loss at step 308000: 2.4739642322063444
