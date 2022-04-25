@@ -24,7 +24,8 @@ We have used GTZAN dataset, Chaconne compilation.
 ## How to Run
 Todo: Still in progress - will update the complete flow once completed.
 
-
+- To train the WaveNet model, execute all the lines in /pytorch-wavenet/wavenet_demo_script.py. The relevant dataset and other filepaths are aloready inplace.
+- To train the classifier, execute all the lines in classification_genre_model.ipynb. Make sure you have uploaded the GTZAN dataset.
 
 
 
