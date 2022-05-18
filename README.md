@@ -27,7 +27,7 @@ There are two ways of running this project
 1. Use Existing Trained Models with .pth file 
 2. Generate from scratch.
 
-1. Use Existing Trained Models with .pth file 
+ ### Use Existing Trained Models with .pth file 
 
 - There is already a sample generated music at  pytorch-wavenet/generated_samples/ with the name latest_generated_clip.wav. This can be used directly.
 
@@ -37,7 +37,7 @@ There are two ways of running this project
 
 - All the outputs containing different genre and emotion audios and images are stored in ./output/
 
-2. Generating and training from scratch New .pth file
+### Generating and training from scratch New .pth file
 
 - An altogether new clip can be generated and trained by WaveNet architecture by executing all the lines in the file /pytorch-wavenet/wavenet_demo_script.py. It already has all other required filepaths inplace.
 
